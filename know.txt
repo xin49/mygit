@@ -1,0 +1,19 @@
+----------------------vim tips----------------------------
+restart:
+    :so 
+        :so %
+        :so ~/.vimrc
+
+shared clipboard:
+    edit $MYVIMRC 
+        set clipboard=unnamed;
+        set clipboard+=unnamed;
+----------------------------------------------------------
+
+----------------------programs----------------------------
+packed/aligned structure:
+    ubuntu c/c++ same structure with free pascal but not
+    same size,
+        sizeof(c/c++) = 60 | sizeof(free pascal) = 64
+    maybe structure aligned with diff byte
+----------------------------------------------------------

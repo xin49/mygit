@@ -1,0 +1,21 @@
+------------------------command-------------------------------------
+nm command:
+    show the symbol infomation in file of (.o, .a, .so).
+    the symbol means: function and global value
+
+    nm [options][files] nm --help
+
+grep command:
+
+------------------------system-------------------------------------
+lazarus ld:
+    lazarus can not use the ld configure file to set search so path
+    1. rebuild lazarus IDE
+        useless
+    2. install system library
+        useless
+    3. remove and build all
+        it work but I find the LoadLibrary function bug
+        so no sure it work
+        if not FileExists(libName) then
+            Exit(2);
