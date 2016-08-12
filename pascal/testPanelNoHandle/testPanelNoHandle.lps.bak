@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="testPanelNoHandle.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="testPanelNoHandle"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="43" Y="6"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="frmHaveShape"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="34"/>
+        <CursorPos X="27" Y="50"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="8" HistoryIndex="7">
+      <Position1>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="21" Column="1" TopLine="6"/>
+      </Position1>
+      <Position2>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="33" Column="3" TopLine="17"/>
+      </Position2>
+      <Position3>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="34" Column="3" TopLine="18"/>
+      </Position3>
+      <Position4>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="35" Column="3" TopLine="19"/>
+      </Position4>
+      <Position5>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="37" Column="3" TopLine="21"/>
+      </Position5>
+      <Position6>
+        <Filename Value="testPanelNoHandle.lpr"/>
+        <Caret Line="13" Column="20" TopLine="1"/>
+      </Position6>
+      <Position7>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="50" Column="22" TopLine="34"/>
+      </Position7>
+      <Position8>
+        <Filename Value="testPanelNoHandle.lpr"/>
+        <Caret Line="11" Column="33" TopLine="1"/>
+      </Position8>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>
