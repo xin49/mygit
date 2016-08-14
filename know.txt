@@ -1,3 +1,10 @@
+----------------------bash tips---------------------------
+catching user input:
+    1. using the "read" built-in command
+        read with echo and printf
+        read [options] NAME1 NAME2 ......NAMEN
+----------------------------------------------------------
+
 ----------------------vim tips----------------------------
 restart:
     :so 
@@ -8,6 +15,9 @@ shared clipboard:
     edit $MYVIMRC 
         set clipboard=unnamed;
         set clipboard+=unnamed;
+map:
+    map F4 to print data & time
+    :inoremap <F4> <C-R>=strftime("%c")<CR>
 ----------------------------------------------------------
 
 ----------------------programs----------------------------
@@ -16,4 +26,55 @@ packed/aligned structure:
     same size,
         sizeof(c/c++) = 60 | sizeof(free pascal) = 64
     maybe structure aligned with diff byte
+
+pascal TCanvas createHandle bug:(wait)
+
+lazarus rely on pkg:
+    TSeriPort(pl_pascalSCADA) has change need rebuild
+    compiler package about pl_pascalSCADA and OK
+
+define ssh:
+----------------------------------------------------------
+
+----------------------script------------------------------
+auto create project directory bash: create_proj.sh:
+    create_proj.sh -name(-n) proj_name
+    app_name
+        configure
+        tool
+        system(linux, windows)
+            bin
+            sdk
+            plugin
+    proj_bin
+    document
+    resource
+    test
+    ----extension
+    proj_plugin
+    proj_sdk
+    proj_tool
+    1. create file directory in current directory
+        mkdir file_name
+    2. get user input command
+        catching user input key word (read)
+----------------------------------------------------------
+
+----------------------temp--------------------------------
+load image(jpg, bmp, png ...... gif):
+    use opencv show image, load gif
+    1. set opencv static rely
+    2. test gif file tyoe
+    3. gui and cle designed
+----------------------------------------------------------
+
+----------------------English-----------------------------
+built-in: 內置
+counterpart:回應 
+----------------------------------------------------------
+
+----------------------linux-------------------------------
+give execute permission to your script:
+    :chmod +x /path/to/yourscript.sh
+    now you can run script with :/path/to/yourscript.sh 
 ----------------------------------------------------------

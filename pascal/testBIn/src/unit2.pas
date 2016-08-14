@@ -38,7 +38,7 @@ implementation
 
 procedure TForm2.FormCreate(Sender:TObject);
 begin
-	libHandle := LoadLibrary('/libtestpanelnohandle.so');
+	libHandle := LoadLibrary('../testPanelNoHandle/libtestpanelnohandle.so');
 	Pointer(CallMe) := GetProcedureAddress(libHandle, 'CallMe');
 end;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <CONFIG>
-  <Compiler Value="/usr/lib/codetyphon/fpc/bin/i386-linux/ppc386" Date="1469092149"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi -Fi/root/codes/pascal/testPanelNoHandle/lib/i386-linux -Fl/opt/gnome/lib -Fu/root/codes/pascal/testPanelNoHandle/src -Fu/usr/lib/codetyphon/lazarus/lcl/units/i386-linux/gtk2 -Fu/usr/lib/codetyphon/lazarus/lcl/units/i386-linux -Fu/usr/lib/codetyphon/lazarus/components/lazutils/lib/i386-linux -Fu/usr/lib/codetyphon/lazarus/packager/units/i386-linux -Fu/root/codes/pascal/testPanelNoHandle/ -FU/root/codes/pascal/testPanelNoHandle/lib/i386-linux/ -l -olibtestpanelnohandle.so -dLCL -dLCLgtk2 testPanelNoHandle.lpr"/>
+  <Compiler Value="/usr/lib/codetyphon/fpc/bin/i386-linux/ppc386" Date="1470922686"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi -Fi/home/ning/codes/mygit/pascal/testPanelNoHandle/lib/i386-linux -Fl/opt/gnome/lib -Fu/home/ning/codes/mygit/pascal/testPanelNoHandle/src -Fu/usr/lib/codetyphon/lazarus/lcl/units/i386-linux/gtk2 -Fu/usr/lib/codetyphon/lazarus/lcl/units/i386-linux -Fu/usr/lib/codetyphon/lazarus/components/lazutils/lib/i386-linux -Fu/usr/lib/codetyphon/lazarus/packager/units/i386-linux -Fu/home/ning/codes/mygit/pascal/testPanelNoHandle/ -FU/home/ning/codes/mygit/pascal/testPanelNoHandle/lib/i386-linux/ -l -olibtestpanelnohandle.so -dLCL -dLCLgtk2 testPanelNoHandle.lpr"/>
 </CONFIG>

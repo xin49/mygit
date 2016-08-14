@@ -47,6 +47,7 @@ end;
 
 procedure CallMe;export;
 begin
+  //Form1.Show;
   Form1.BitBtn1Click(Form1);
 end;
 

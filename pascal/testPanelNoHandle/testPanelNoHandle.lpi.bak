@@ -30,6 +30,7 @@
     <RunParams>
       <local>
         <FormatVersion Value="1"/>
+        <HostApplicationFilename Value="/home/ning/codes/mygit/pascal/testBIn/project1"/>
         <LaunchingApplication PathPlusParams="/usr/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
       </local>
     </RunParams>
@@ -48,6 +49,7 @@
         <Filename Value="src/frmhaveshape.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="frmHaveShape"/>
       </Unit1>
