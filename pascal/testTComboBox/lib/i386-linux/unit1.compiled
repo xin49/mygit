@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <Compiler Value="/usr/lib/codetyphon/fpc/bin/i386-linux/ppc386" Date="1470922686"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -vewnhi -Fi/home/ning/codes/pascal/testTComboBox/lib/i386-linux -Fu/home/ning/codes/pascal/testTComboBox/src -Fu/home/ning/codes/pascal/testTComboBox/ -FU/home/ning/codes/pascal/testTComboBox/lib/i386-linux/ -l -olibunit1.so unit1.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>

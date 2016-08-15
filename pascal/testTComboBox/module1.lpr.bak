@@ -1,0 +1,18 @@
+library module1;
+
+{$mode objfpc}{$H+}
+
+uses
+  Classes, unit1
+  { you can add units after this };
+procedure CallMe;
+begin
+
+end;
+
+exports
+	CallMe name 'CallMe';
+
+begin
+end.
+

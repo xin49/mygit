@@ -1,0 +1,11 @@
+library module2;
+
+{$mode objfpc}{$H+}
+
+uses
+  Classes, unit2
+  { you can add units after this };
+
+begin
+end.
+

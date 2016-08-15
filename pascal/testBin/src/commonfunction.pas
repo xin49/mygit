@@ -1,0 +1,38 @@
+unit commonfunction;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils;
+
+	function GenLoadLibrary(hand:THandle; var pFunc:Pointer):Boolean;
+	procedure GenFreeLibrary(hand:THandle);
+
+implementation
+
+uses
+  dynlibs;
+
+function GenLoadLibrary(hand:THandle; var pFunc:Pointer):Boolean;
+begin
+  result:=False;
+  hand := LoadLibrary('/home/ning/codes/pascal/testTComboBox/libtesttcombobox.so');
+  if hand <> 0 then
+	begin
+    pFunc := GetProcedureAddress(hand, 'CallMe');
+    if pFunc <> nil then
+    	exit(True)
+     else
+       GenFreeLibrary(hand);
+  end;
+end;
+
+procedure GenFreeLibrary(hand:THandle);
+begin
+  FreeLibrary(hand);
+end;
+
+end.
+

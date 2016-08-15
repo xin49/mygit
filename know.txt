@@ -33,7 +33,10 @@ lazarus rely on pkg:
     TSeriPort(pl_pascalSCADA) has change need rebuild
     compiler package about pl_pascalSCADA and OK
 
-define ssh:
+pascal TComboBox cause bug:
+    1. Main form create and free combobox(without Tstrings) form succeed
+    2. add tstrings just fine
+    3. call dlib cb to create and free
 ----------------------------------------------------------
 
 ----------------------script------------------------------
