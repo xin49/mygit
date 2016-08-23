@@ -18,6 +18,10 @@ shared clipboard:
 map:
     map F4 to print data & time
     :inoremap <F4> <C-R>=strftime("%c")<CR>
+
+auto refresh:
+    " 设置当文件被改动时自动载入
+    set autoread
 ----------------------------------------------------------
 
 ----------------------programs----------------------------
@@ -36,7 +40,14 @@ lazarus rely on pkg:
 pascal TComboBox cause bug:
     1. Main form create and free combobox(without Tstrings) form succeed
     2. add tstrings just fine
-    3. call dlib cb to create and free
+    3. call dlib cb to show and hide typecast
+       TComboBox with items(add in Object Inspecter||source) typecast 
+       TComboBox without items  
+    4. free form fail
+    5. change fcl and lcl to lazarus 1.6 and fpc3.0 over
+
+pascal gui pragom create console:
+
 ----------------------------------------------------------
 
 ----------------------script------------------------------
@@ -80,4 +91,53 @@ counterpart:回應
 give execute permission to your script:
     :chmod +x /path/to/yourscript.sh
     now you can run script with :/path/to/yourscript.sh 
+
+search library path:
+    first in the paths of the environment variable LD_LIBRARY_PATH
+    then in /lib
+    then /usr/lib
+    finally the paths of /etc/ld.so.conf
+    when change the ld.so.conf or ld.so.conf.d/*.conf file need 
+        sudo ldconfig//cache the ld.so.conf to ld.cache then 
+        library and path already note
+    export LD_LIBRARY_PATH=/path
+    echo $LD_LIBRARY_PATH
+
+change application search and ico:
+    vim appname.desktop// /usr/share/application
+    cp appname.desktop tp ~/.local/share/applications/
+    mv ico image to ~/.local/share/icons/hicolor/
+    but on left languch still no change
+----------------------------------------------------------
+
+----------------------opencv------------------------------
+linux opencv cvLoadImage(filename, 1) load png fail:
+    cvLoadImage always supported:
+        bmp, dib, pbm, pgm, ppm, sr, ras;
+    see the notes section:
+        jpeg, jpg, jpe, png, tiff, tif
+    note section:
+    1. The function determines the type of an image by the content not by extension
+----------------------------------------------------------
+
+-------------------------Daily----------------------------
+1. bug in algrithm in processimage not out
+2. mulit-roi bug:
+    DrawResult Start no End
+    test RGB mod
+3. bug in limit
+2016-08-19 五 08:33 上午
+1. 接口的设计：
+    接口应该不关注接口内部数据，接口主要目的是传递和检测
+    泛用型接口
+    接口选型
+
+2016-08-22 一 08:43 上午
+1. create opencv module project
+2. draw image with c
+
+2016-08-23 二 02:02 下午
+#define MY_CEILING(n, x)
+    (x%n+n-1)/n*n+x/n*n
+    (x%n+n-1+x)
 ----------------------------------------------------------

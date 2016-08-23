@@ -7,5 +7,5 @@ object frmShowImage: TfrmShowImage
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  LCLVersion = '1.1'
+  LCLVersion = '1.6.0.4'
 end

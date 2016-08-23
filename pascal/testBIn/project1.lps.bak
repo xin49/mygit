@@ -3,16 +3,17 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="13">
+    <Units Count="17">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="project1"/>
-        <EditorIndex Value="3"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="1" Y="19"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="46" Y="20"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -22,20 +23,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit2"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="39"/>
-        <CursorPos X="58" Y="45"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="1"/>
+        <CursorPos X="8" Y="1"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1662"/>
+        <TopLine Value="1666"/>
         <CursorPos X="1" Y="1670"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
@@ -43,7 +43,7 @@
       <Unit3>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/graphics.pp"/>
         <UnitName Value="Graphics"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="0"/>
         <TopLine Value="639"/>
         <CursorPos X="3" Y="711"/>
@@ -52,25 +52,25 @@
       </Unit3>
       <Unit4>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="85"/>
+        <TopLine Value="96"/>
         <CursorPos X="1" Y="99"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="13"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="7922"/>
-        <CursorPos X="13" Y="7927"/>
+        <TopLine Value="7672"/>
+        <CursorPos X="1" Y="7684"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/objpas/classes/classesh.inc"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="14"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1810"/>
         <CursorPos X="14" Y="1819"/>
@@ -80,7 +80,7 @@
       <Unit7>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/controls.pp"/>
         <UnitName Value="Controls"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2185"/>
         <CursorPos X="15" Y="2194"/>
@@ -90,7 +90,7 @@
       <Unit8>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/extctrls.pp"/>
         <UnitName Value="ExtCtrls"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="271"/>
         <CursorPos X="14" Y="281"/>
@@ -100,7 +100,7 @@
       <Unit9>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/lcltype.pp"/>
         <UnitName Value="LCLType"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="12"/>
         <WindowIndex Value="0"/>
         <TopLine Value="100"/>
         <CursorPos X="45" Y="111"/>
@@ -110,7 +110,7 @@
       <Unit10>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/forms.pp"/>
         <UnitName Value="Forms"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1395"/>
         <CursorPos X="104" Y="1437"/>
@@ -128,143 +128,154 @@
       </Unit11>
       <Unit12>
         <Filename Value="../testPanelNoHandle/src/frmhaveshape.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <UnitName Value="frmHaveShape"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="32"/>
-        <CursorPos X="57" Y="38"/>
+        <TopLine Value="1"/>
+        <CursorPos X="122" Y="8"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit12>
+      <Unit13>
+        <Filename Value="umdimain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form3"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="umdimain"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="48" Y="10"/>
+        <UsageCount Value="21"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="/oooo/DFVision_Proj/DFVision_Common/src/df_descompress.pas"/>
+        <UnitName Value="df_descompress"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="26" Y="8"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="/oooo/DFVision_Proj/DFVision_Common/src/df_plugininterfaces.pas"/>
+        <UnitName Value="df_plugininterfaces"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="125"/>
+        <CursorPos X="6" Y="135"/>
+        <UsageCount Value="10"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form4"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="66"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit16>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="21" HistoryIndex="20">
       <Position1>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
-        <Caret Line="99" Column="1" TopLine="88"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
+        <Caret Line="1730" Column="1" TopLine="1721"/>
       </Position1>
       <Position2>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7723" Column="1" TopLine="7719"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
+        <Caret Line="1731" Column="1" TopLine="1721"/>
       </Position2>
       <Position3>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7725" Column="1" TopLine="7719"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
+        <Caret Line="1663" Column="1" TopLine="1656"/>
       </Position3>
       <Position4>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7730" Column="1" TopLine="7719"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
+        <Caret Line="1665" Column="1" TopLine="1656"/>
       </Position4>
       <Position5>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7732" Column="1" TopLine="7719"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
+        <Caret Line="1668" Column="1" TopLine="1666"/>
       </Position5>
       <Position6>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7723" Column="1" TopLine="7719"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
+        <Caret Line="1670" Column="1" TopLine="1666"/>
       </Position6>
       <Position7>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7725" Column="1" TopLine="7719"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
+        <Caret Line="82" Column="1" TopLine="81"/>
       </Position7>
       <Position8>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7730" Column="1" TopLine="7719"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
+        <Caret Line="99" Column="1" TopLine="96"/>
       </Position8>
       <Position9>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7738" Column="1" TopLine="7719"/>
+        <Caret Line="7667" Column="1" TopLine="7665"/>
       </Position9>
       <Position10>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7740" Column="1" TopLine="7721"/>
+        <Caret Line="7671" Column="37" TopLine="7665"/>
       </Position10>
       <Position11>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7734" Column="1" TopLine="7721"/>
+        <Caret Line="7674" Column="1" TopLine="7669"/>
       </Position11>
       <Position12>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7740" Column="1" TopLine="7721"/>
+        <Caret Line="7676" Column="1" TopLine="7669"/>
       </Position12>
       <Position13>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
-        <Caret Line="101" Column="1" TopLine="88"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
+        <Caret Line="7678" Column="1" TopLine="7672"/>
       </Position13>
       <Position14>
-        <Filename Value="../testPanelNoHandle/src/frmhaveshape.pas"/>
-        <Caret Line="44" Column="49" TopLine="32"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
+        <Caret Line="7684" Column="1" TopLine="7672"/>
       </Position14>
       <Position15>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1744" Column="1" TopLine="1732"/>
+        <Filename Value="src/unit2.pas"/>
+        <Caret Line="47" Column="1" TopLine="39"/>
       </Position15>
       <Position16>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1728" Column="1" TopLine="1717"/>
+        <Filename Value="src/unit2.pas"/>
+        <Caret Line="8" Column="102" TopLine="1"/>
       </Position16>
       <Position17>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1729" Column="1" TopLine="1717"/>
+        <Filename Value="src/unit2.pas"/>
+        <Caret Line="17" Column="51" TopLine="7"/>
       </Position17>
       <Position18>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1730" Column="1" TopLine="1717"/>
+        <Filename Value="src/unit2.pas"/>
+        <Caret Line="84" Column="55" TopLine="65"/>
       </Position18>
       <Position19>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1731" Column="1" TopLine="1717"/>
+        <Filename Value="/oooo/DFVision_Proj/DFVision_Common/src/df_descompress.pas"/>
+        <Caret Line="1" Column="1" TopLine="1"/>
       </Position19>
       <Position20>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1663" Column="1" TopLine="1662"/>
+        <Filename Value="src/unit2.pas"/>
+        <Caret Line="175" Column="8" TopLine="145"/>
       </Position20>
       <Position21>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1670" Column="1" TopLine="1662"/>
+        <Filename Value="src/unit2.pas"/>
+        <Caret Line="231" Column="8" TopLine="211"/>
       </Position21>
-      <Position22>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
-        <Caret Line="99" Column="1" TopLine="85"/>
-      </Position22>
-      <Position23>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7723" Column="1" TopLine="7719"/>
-      </Position23>
-      <Position24>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7732" Column="1" TopLine="7719"/>
-      </Position24>
-      <Position25>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7723" Column="1" TopLine="7719"/>
-      </Position25>
-      <Position26>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7725" Column="1" TopLine="7719"/>
-      </Position26>
-      <Position27>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7730" Column="1" TopLine="7719"/>
-      </Position27>
-      <Position28>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7725" Column="12" TopLine="7719"/>
-      </Position28>
-      <Position29>
-        <Filename Value="src/unit2.pas"/>
-        <Caret Line="48" Column="46" TopLine="36"/>
-      </Position29>
-      <Position30>
-        <Filename Value="src/unit2.pas"/>
-        <Caret Line="47" Column="1" TopLine="36"/>
-      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
-    <BreakPoints Count="4">
+    <BreakPoints Count="1">
       <Item1>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
@@ -272,27 +283,6 @@
         <Source Value="unit1.pas"/>
         <Line Value="46"/>
       </Item1>
-      <Item2>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="../testPanelNoHandle/src/frmhaveshape.pas"/>
-        <Line Value="45"/>
-      </Item2>
-      <Item3>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src/unit2.pas"/>
-        <Line Value="42"/>
-      </Item3>
-      <Item4>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src/unit2.pas"/>
-        <Line Value="41"/>
-      </Item4>
     </BreakPoints>
   </Debugging>
   <EditorMacros Count="0"/>

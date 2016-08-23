@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="genbin2.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos X="17" Y="15"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="src/unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="26" Y="2"/>
+        <UsageCount Value="20"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="src/genbinbunit.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="10"/>
+        <CursorPos Y="61"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="10" HistoryIndex="9">
+      <Position1>
+        <Filename Value="genbin2.lpr"/>
+        <Caret Line="15" Column="17"/>
+      </Position1>
+      <Position2>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="60" Column="40" TopLine="49"/>
+      </Position2>
+      <Position3>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="63" TopLine="49"/>
+      </Position3>
+      <Position4>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="64" TopLine="46"/>
+      </Position4>
+      <Position5>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="60" Column="30" TopLine="46"/>
+      </Position5>
+      <Position6>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="68" TopLine="55"/>
+      </Position6>
+      <Position7>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="69" TopLine="55"/>
+      </Position7>
+      <Position8>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="59" Column="63" TopLine="55"/>
+      </Position8>
+      <Position9>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="60" Column="10" TopLine="55"/>
+      </Position9>
+      <Position10>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="63" Column="38" TopLine="55"/>
+      </Position10>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

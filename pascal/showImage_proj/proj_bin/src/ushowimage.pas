@@ -36,10 +36,10 @@ implementation
 procedure TfrmShowImage.FormCreate(Sender:TObject);
 var
   pImgSrc:PIplImage;
-  imgSize:CvSize;
 begin
-  if FileExists('/home/ning/codes/pascal/showImage_proj/proj_bin/1.jpeg') then
-  	pImgSrc:=cvLoadImage('/home/ning/codes/pascal/showImage_proj/proj_bin/1.jpeg', 1);
+///root/图片/配置dfvision.png
+  if FileExists('/root/图片/proj_plugin缺少.png') then
+  	pImgSrc:=cvLoadImage('/root/图片/proj_plugin缺少.png', 1);
   cvNamedWindow('Image Test', 1);
 	cvShowImage('Image Test', pImgSrc);
   cvWaitKey(0);

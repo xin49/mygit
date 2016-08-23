@@ -1,185 +1,118 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="6">
       <Unit0>
         <Filename Value="genbin.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="genbin"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="0"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="12"/>
-        <CursorPos X="1" Y="24"/>
-        <UsageCount Value="20"/>
+        <WindowIndex Value="1"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="src/commonfunction.pas"/>
-        <UnitName Value="commonfunction"/>
-        <EditorIndex Value="1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="5"/>
-        <CursorPos X="1" Y="10"/>
+        <WindowIndex Value="1"/>
+        <CursorPos Y="10"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/inc/dynlibs.pas"/>
-        <UnitName Value="dynlibs"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="31"/>
-        <CursorPos X="10" Y="38"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="10" Y="37"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/unix/dynlibs.inc"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="45"/>
+        <CursorPos Y="51"/>
+        <UsageCount Value="10"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/unix/dl.pp"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="16"/>
+        <CursorPos X="5" Y="26"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="src/genbinbunit.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="49"/>
+        <CursorPos Y="55"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
-      </Unit2>
+      </Unit5>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="0"/>
-    </General>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="12" HistoryIndex="11">
       <Position1>
         <Filename Value="genbin.lpr"/>
-        <Caret Line="15" Column="1" TopLine="9"/>
+        <Caret Line="16" Column="20" TopLine="7"/>
       </Position1>
       <Position2>
         <Filename Value="genbin.lpr"/>
-        <Caret Line="21" Column="1" TopLine="9"/>
+        <Caret Line="16" Column="28" TopLine="7"/>
       </Position2>
       <Position3>
         <Filename Value="genbin.lpr"/>
-        <Caret Line="14" Column="1" TopLine="9"/>
+        <Caret Line="16" Column="48" TopLine="7"/>
       </Position3>
       <Position4>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="22" Column="1" TopLine="18"/>
+        <Filename Value="genbin.lpr"/>
+        <Caret Line="16" Column="46" TopLine="7"/>
       </Position4>
       <Position5>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="24" Column="1" TopLine="18"/>
+        <Filename Value="genbin.lpr"/>
+        <Caret Line="16" Column="79" TopLine="7"/>
       </Position5>
       <Position6>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="25" Column="1" TopLine="18"/>
+        <Filename Value="genbin.lpr"/>
+        <Caret Line="14" Column="26" TopLine="14"/>
       </Position6>
       <Position7>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="24" Column="24" TopLine="18"/>
+        <Filename Value="genbin.lpr"/>
+        <Caret Line="5" Column="13"/>
       </Position7>
       <Position8>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="22" Column="58" TopLine="18"/>
+        <Filename Value="genbin.lpr"/>
+        <Caret Line="8" Column="15"/>
       </Position8>
       <Position9>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="14" Column="1" TopLine="9"/>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="50" Column="40" TopLine="50"/>
       </Position9>
       <Position10>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="22" Column="1" TopLine="18"/>
+        <Filename Value="src/genbinbunit.pas"/>
+        <Caret Line="55" TopLine="50"/>
       </Position10>
       <Position11>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="24" Column="1" TopLine="18"/>
+        <Filename Value="genbin.lpr"/>
+        <Caret Line="9" Column="14"/>
       </Position11>
       <Position12>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="25" Column="11" TopLine="18"/>
+        <Filename Value="genbin.lpr"/>
+        <Caret Line="2"/>
       </Position12>
-      <Position13>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="30" Column="1" TopLine="18"/>
-      </Position13>
-      <Position14>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="14" Column="1" TopLine="6"/>
-      </Position14>
-      <Position15>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="22" Column="1" TopLine="18"/>
-      </Position15>
-      <Position16>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="15" Column="1" TopLine="6"/>
-      </Position16>
-      <Position17>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="14" Column="27" TopLine="3"/>
-      </Position17>
-      <Position18>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="19" Column="1" TopLine="8"/>
-      </Position18>
-      <Position19>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="14" Column="1" TopLine="8"/>
-      </Position19>
-      <Position20>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="13" Column="57" TopLine="8"/>
-      </Position20>
-      <Position21>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="14" Column="43" TopLine="7"/>
-      </Position21>
-      <Position22>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="15" Column="18" TopLine="7"/>
-      </Position22>
-      <Position23>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="18" Column="10" TopLine="7"/>
-      </Position23>
-      <Position24>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="34" Column="21" TopLine="26"/>
-      </Position24>
-      <Position25>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="12" Column="4" TopLine="4"/>
-      </Position25>
-      <Position26>
-        <Filename Value="src/commonfunction.pas"/>
-        <Caret Line="13" Column="4" TopLine="6"/>
-      </Position26>
-      <Position27>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="12" Column="11" TopLine="5"/>
-      </Position27>
-      <Position28>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="29" Column="10" TopLine="15"/>
-      </Position28>
-      <Position29>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="19" Column="19" TopLine="10"/>
-      </Position29>
-      <Position30>
-        <Filename Value="genbin.lpr"/>
-        <Caret Line="23" Column="1" TopLine="11"/>
-      </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
-    <BreakPoints Count="2">
+    <BreakPoints Count="1">
       <Item1>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
-        <Source Value="genbin.lpr"/>
-        <Line Value="23"/>
+        <Source Value="src/genbinbunit.pas"/>
+        <Line Value="55"/>
       </Item1>
-      <Item2>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="genbin.lpr"/>
-        <Line Value="16"/>
-      </Item2>
     </BreakPoints>
   </Debugging>
-  <EditorMacros Count="0"/>
 </CONFIG>

@@ -3,18 +3,19 @@ library module1;
 {$mode objfpc}{$H+}
 
 uses
-  Classes, unit1
+  Classes, Forms, Interfaces,
+  unit1
   { you can add units after this };
-procedure CallMe;
-begin
-  form1 := TForm1.Create(nil);
-  form1.Show;
-  form1.Free;
-end;
 
 exports
 	CallMe name 'CallMe';
 
 begin
+  Application.Initialize;
+  //form1 := TForm1.Create(nil);
+  //form1.ComboBox1.Items.Add('11');
+  //form1.ComboBox1.Items.Add('12');
+  //form1.ComboBox1.Items.Add('13');
+  //form1.ComboBox1.Items.Add('14');
 end.
 

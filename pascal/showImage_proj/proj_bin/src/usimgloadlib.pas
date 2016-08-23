@@ -34,8 +34,8 @@ implementation
 function GenerLoadDlib(libName:string; var libHand:THandle):Integer;
 begin
   libHand := 0;
-  if not FileExists(libName) then
-  	Exit(-2);
+  //if not FileExists(libName) then
+  //	Exit(-2);
 	libHand := LoadLibrary(libName);
   if libHand = 0 then
     Exit(-1)
@@ -59,9 +59,9 @@ var
   retVal:Integer;
 
 initialization
-	retVal:=GenerLoadDlib('/usr/local/lib/libopencv_legacy.so', hDLibLegacy);
-  retVal:=GenerGetFuncAdree(hDLibLegacy, 'cvCreateImage', Pointer(cvCreateImage));
-	retVal:=GenerLoadDlib('/usr/local/lib/libopencv_highgui.so', hDLibHighgui);
+	//retVal:=GenerLoadDlib('/usr/local/lib/libopencv_legacy.so', hDLibLegacy);
+ // retVal:=GenerGetFuncAdree(hDLibLegacy, 'cvCreateImage', Pointer(cvCreateImage));
+	retVal:=GenerLoadDlib('libopencv_highgui.so', hDLibHighgui);
   retVal:=GenerGetFuncAdree(hDLibHighgui, 'cvLoadImage', Pointer(cvLoadImage));
   retVal:=GenerGetFuncAdree(hDLibHighgui, 'cvSaveImage', Pointer(cvSaveImage));
   retVal:=GenerGetFuncAdree(hDLibHighgui, 'cvNamedWindow', Pointer(cvNamedWindow));

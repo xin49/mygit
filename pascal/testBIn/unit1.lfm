@@ -1,0 +1,272 @@
+object Form4: TForm4
+  Left = 813
+  Height = 387
+  Top = 281
+  Width = 320
+  Caption = 'Form4'
+  ClientHeight = 387
+  ClientWidth = 320
+  Menu = mmMain
+  LCLVersion = '1.1'
+  object mditasks: TRxMDITasks
+    Left = 0
+    Height = 25
+    Top = 0
+    Width = 320
+    Align = alTop
+  end
+  object MDIPanel: TRxMDIPanel
+    Left = 0
+    Height = 335
+    Top = 25
+    Width = 320
+    TaskPanel = mditasks
+    Align = alClient
+    BevelOuter = bvNone
+    object ScrollBar1: TScrollBar
+      Left = 36
+      Height = 13
+      Top = 22
+      Width = 121
+      PageSize = 0
+      TabOrder = 0
+    end
+  end
+  object stbMain: TStatusBar
+    Left = 0
+    Height = 27
+    Top = 360
+    Width = 320
+    Panels = <    
+      item
+        Text = 'DFVision'
+        Width = 200
+      end    
+      item
+        Width = 90
+      end    
+      item
+        Width = 200
+      end    
+      item
+        Width = 90
+      end    
+      item
+        Width = 0
+      end    
+      item
+        Alignment = taRightJustify
+        Text = 'Shanghai Dragonfly Vision Technology Co., Ltd.    '
+        Width = 250
+      end>
+    SimplePanel = False
+  end
+  object mmMain: TMainMenu
+    left = 16
+    top = 40
+    object mmFileItem: TMenuItem
+      Caption = '&File'
+      object MenuItem2: TMenuItem
+        Action = actNewProject
+      end
+      object mmOpen: TMenuItem
+        Action = actOpenProject
+      end
+      object mmExit: TMenuItem
+        Action = actSaveProject
+      end
+      object MenuItem11: TMenuItem
+        Action = actSaveAsProject
+      end
+      object mmAssocDfv: TMenuItem
+        Caption = 'Assoc&iate .dfv Project File'
+      end
+      object mmRmDfvAssoc: TMenuItem
+        Caption = '&Remove .dfv File Association'
+      end
+      object MenuItem10: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem12: TMenuItem
+        Action = actExit
+      end
+    end
+    object mmWindowItem: TMenuItem
+      Caption = '&Window'
+      Visible = False
+      object mmWindowAcqItem: TMenuItem
+        Caption = 'Acquire &Images'
+      end
+      object mmWindowMainItem: TMenuItem
+        Caption = 'Machine &Vision'
+        Visible = False
+      end
+    end
+    object mmOptions: TMenuItem
+      Caption = 'O&ptions'
+      object mmLockMenu: TMenuItem
+        AutoCheck = True
+        Caption = 'Lock'
+      end
+      object mmMenuOnlyOpen: TMenuItem
+        AutoCheck = True
+        Caption = 'Adv. Menu'
+        Checked = True
+      end
+      object mmShowFunctions: TMenuItem
+        AutoCheck = True
+        Caption = 'Functions'
+        Checked = True
+      end
+      object mmShowScript: TMenuItem
+        AutoCheck = True
+        Caption = 'Script'
+        Checked = True
+      end
+      object mmShowRunButton: TMenuItem
+        AutoCheck = True
+        Caption = 'Floating Buttons'
+      end
+      object mmFontAutoZoom: TMenuItem
+        AutoCheck = True
+        Caption = 'Font Auto Zoom'
+        Checked = True
+      end
+      object MenuItem3: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem1: TMenuItem
+        Action = actAutoLoadingSettings
+      end
+      object mmCOMSettings: TMenuItem
+        Action = actCOMSettings
+      end
+      object mmServerConnSetting: TMenuItem
+        Action = actServerConnSetting
+      end
+      object mmAdvMode: TMenuItem
+        AutoCheck = True
+        Caption = 'Adv. Mode'
+      end
+      object mmInfomations: TMenuItem
+        AutoCheck = True
+        Caption = 'Info.'
+      end
+    end
+    object mmLanguageItem: TMenuItem
+      Caption = '&Language'
+      object miLang1: TMenuItem
+        Tag = 2
+        Action = actChangeLanguage
+        Caption = 'English'
+      end
+      object miLang2: TMenuItem
+        Tag = 1
+        Action = actChangeLanguage
+        Caption = '中文'
+      end
+    end
+    object mmHelpItem: TMenuItem
+      Caption = '&Help'
+      object MenuItem4: TMenuItem
+        Action = actDFVisionHelp
+      end
+      object MenuItem5: TMenuItem
+        Action = actManual
+      end
+      object mmAbout: TMenuItem
+        Action = actAbout
+        Caption = 'About DFVision'
+      end
+    end
+    object mmLicense: TMenuItem
+      Caption = 'L&icense'
+      Visible = False
+      object mmApplyForLicense: TMenuItem
+        Caption = '&Apply For License'
+        ShortCut = 49160
+      end
+    end
+  end
+  object ActionListMDIMain: TActionList
+    left = 144
+    top = 40
+    object actChangeToEnglish: TAction
+      Caption = 'English'
+    end
+    object actChangeToChinese: TAction
+      Caption = '中文'
+    end
+    object actOpenProject: TAction
+      Category = 'File'
+      Caption = '&Open'
+      Hint = 'Open project.'
+      ImageIndex = 0
+    end
+    object actSaveProject: TAction
+      Category = 'File'
+      Caption = '&Save'
+      Hint = 'Save project.'
+      ImageIndex = 3
+    end
+    object actCloseProject: TAction
+      Category = 'File'
+      Caption = '&Close'
+      Hint = 'Close project.'
+      ImageIndex = 18
+    end
+    object actNewProject: TAction
+      Category = 'File'
+      Caption = '&New'
+      Hint = 'New project.'
+      ImageIndex = 19
+    end
+    object actSaveAsProject: TAction
+      Category = 'File'
+      Caption = 'Save &As'
+      Hint = 'Save project as.'
+      ImageIndex = 20
+    end
+    object actExit: TAction
+      Caption = 'E&xit'
+    end
+    object actAbout: TAction
+      Category = 'Help'
+      Caption = 'About Dragonfly Vision'
+    end
+    object actCOMSettings: TAction
+      Category = 'Options'
+      Caption = 'Frame Signal Communications Settings'
+    end
+    object actAutoLoadingSettings: TAction
+      Category = 'Options'
+      Caption = 'Auto Loading Settings'
+    end
+    object actChangeLanguage: TAction
+      Caption = 'actChangeLanguage'
+    end
+    object actChangeToAdvMode: TAction
+      Category = 'Options'
+      Caption = 'Adv. Mode'
+    end
+    object actServerConnSetting: TAction
+      Category = 'Options'
+      Caption = 'Server Connection Setting'
+    end
+    object actDFVisionHelp: TAction
+      Category = 'Help'
+      Caption = 'Help'
+    end
+    object actManual: TAction
+      Category = 'Help'
+      Caption = 'Manual'
+      Visible = False
+    end
+  end
+  object tmrAutoLoadingSettingsFilename: TTimer
+    Enabled = False
+    Interval = 1
+    left = 16
+    top = 96
+  end
+end

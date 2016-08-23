@@ -3,7 +3,7 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="6">
+    <Units Count="8">
       <Unit0>
         <Filename Value="testPanelNoHandle.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -11,8 +11,8 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
-        <CursorPos X="43" Y="6"/>
-        <UsageCount Value="20"/>
+        <CursorPos X="31" Y="13"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -24,187 +24,201 @@
         <UnitName Value="frmHaveShape"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="39"/>
-        <CursorPos X="24" Y="45"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="257"/>
+        <CursorPos X="31" Y="259"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1663"/>
+        <TopLine Value="1653"/>
         <CursorPos X="1" Y="1670"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="90"/>
+        <TopLine Value="83"/>
         <CursorPos X="1" Y="99"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="7669"/>
-        <CursorPos X="1" Y="7669"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="7729"/>
+        <CursorPos X="1" Y="7738"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/controls.pp"/>
         <UnitName Value="Controls"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
         <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit5>
+      <Unit6>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="4"/>
+        <CursorPos X="10" Y="5"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="424"/>
+        <CursorPos X="14" Y="432"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit7>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="0"/>
     </General>
-    <JumpHistory Count="30" HistoryIndex="27">
+    <JumpHistory Count="30" HistoryIndex="28">
       <Position1>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1730" Column="1" TopLine="1721"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="221" Column="38" TopLine="213"/>
       </Position1>
       <Position2>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1731" Column="1" TopLine="1721"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="253" Column="91" TopLine="244"/>
       </Position2>
       <Position3>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1663" Column="1" TopLine="1656"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="264" Column="16" TopLine="255"/>
       </Position3>
       <Position4>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1665" Column="1" TopLine="1656"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="6" Column="37" TopLine="1"/>
       </Position4>
       <Position5>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1668" Column="1" TopLine="1656"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="8" Column="115" TopLine="1"/>
       </Position5>
       <Position6>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1670" Column="1" TopLine="1658"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="264" Column="8" TopLine="255"/>
       </Position6>
       <Position7>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
-        <Caret Line="99" Column="1" TopLine="90"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="8" Column="122" TopLine="1"/>
       </Position7>
       <Position8>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7667" Column="1" TopLine="7659"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="266" Column="1" TopLine="255"/>
       </Position8>
       <Position9>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7669" Column="1" TopLine="7659"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="267" Column="1" TopLine="255"/>
       </Position9>
       <Position10>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7674" Column="1" TopLine="7668"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="266" Column="41" TopLine="255"/>
       </Position10>
       <Position11>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7676" Column="1" TopLine="7668"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="143" Column="49" TopLine="136"/>
       </Position11>
       <Position12>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7667" Column="1" TopLine="7659"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="245" Column="18" TopLine="228"/>
       </Position12>
       <Position13>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7669" Column="1" TopLine="7662"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="254" Column="4" TopLine="254"/>
       </Position13>
       <Position14>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7674" Column="1" TopLine="7662"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="253" Column="4" TopLine="253"/>
       </Position14>
       <Position15>
         <Filename Value="src/frmhaveshape.pas"/>
-        <Caret Line="45" Column="24" TopLine="39"/>
+        <Caret Line="252" Column="4" TopLine="252"/>
       </Position15>
       <Position16>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1744" Column="1" TopLine="1736"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="253" Column="4" TopLine="253"/>
       </Position16>
       <Position17>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1728" Column="1" TopLine="1721"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="265" Column="1" TopLine="256"/>
       </Position17>
       <Position18>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1729" Column="1" TopLine="1721"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="264" Column="1" TopLine="255"/>
       </Position18>
       <Position19>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1730" Column="1" TopLine="1721"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="3" Column="41" TopLine="11"/>
       </Position19>
       <Position20>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1731" Column="1" TopLine="1721"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="14" Column="31" TopLine="11"/>
       </Position20>
       <Position21>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1663" Column="1" TopLine="1656"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="263" Column="14" TopLine="257"/>
       </Position21>
       <Position22>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1665" Column="1" TopLine="1656"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="8" Column="122" TopLine="85"/>
       </Position22>
       <Position23>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1668" Column="1" TopLine="1663"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="1" Column="11" TopLine="1"/>
       </Position23>
       <Position24>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/canvas.inc"/>
-        <Caret Line="1670" Column="1" TopLine="1663"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="13" Column="76" TopLine="1"/>
       </Position24>
       <Position25>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
-        <Caret Line="82" Column="1" TopLine="89"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="265" Column="14" TopLine="257"/>
       </Position25>
       <Position26>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/controlcanvas.inc"/>
-        <Caret Line="99" Column="1" TopLine="90"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="13" Column="76" TopLine="1"/>
       </Position26>
       <Position27>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7667" Column="1" TopLine="7665"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="6" Column="37" TopLine="1"/>
       </Position27>
       <Position28>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7669" Column="1" TopLine="7669"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="4" Column="35" TopLine="1"/>
       </Position28>
       <Position29>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7667" Column="1" TopLine="7659"/>
+        <Filename Value="src/frmhaveshape.pas"/>
+        <Caret Line="265" Column="24" TopLine="257"/>
       </Position29>
       <Position30>
-        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/wincontrol.inc"/>
-        <Caret Line="7232" Column="1" TopLine="7225"/>
+        <Filename Value="/usr/lib/codetyphon/lazarus/lcl/stdctrls.pp"/>
+        <Caret Line="432" Column="14" TopLine="424"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
-  <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="src/frmhaveshape.pas"/>
-        <Line Value="45"/>
-      </Item1>
-    </BreakPoints>
-  </Debugging>
   <EditorMacros Count="0"/>
 </CONFIG>

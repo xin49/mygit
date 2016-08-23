@@ -1,0 +1,35 @@
+object Form2: TForm2
+  Left = 813
+  Height = 240
+  Top = 309
+  Width = 320
+  Caption = 'Form2'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '1.1'
+  object Panel1: TPanel
+    Left = 16
+    Height = 186
+    Top = 40
+    Width = 260
+    Caption = 'Panel1'
+    ClientHeight = 186
+    ClientWidth = 260
+    TabOrder = 0
+    object Shape1: TShape
+      Left = 144
+      Height = 65
+      Top = 96
+      Width = 65
+    end
+    object ComboBox1: TComboBox
+      Left = 41
+      Height = 35
+      Top = 45
+      Width = 100
+      ItemHeight = 0
+      TabOrder = 0
+      Text = 'ComboBox1'
+    end
+  end
+end

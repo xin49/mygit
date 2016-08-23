@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, Unit2
+  Forms, pl_rx, pl_dcpcomp, pl_pascalscada, pl_indycomp, Unit2, Unit1
   { you can add units after this };
 
 {$R *.res}
@@ -15,7 +15,9 @@ uses
 begin
   RequireDerivedFormResource := True;
   Application.Initialize;
-  Application.CreateForm(TForm2, Form2);
+  //Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm4, Form4);
+  Form4.MDIPanel.ChildWindowsCreate(Form2, TForm2);
   Application.Run;
 end.
 

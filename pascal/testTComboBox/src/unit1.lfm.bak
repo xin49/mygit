@@ -1,19 +1,32 @@
 object Form1: TForm1
-  Left = 441
+  Left = 566
   Height = 240
-  Top = 374
+  Top = 364
   Width = 320
-  Caption = 'Form1'
+  Caption = 'module1'
   ClientHeight = 240
   ClientWidth = 320
   LCLVersion = '1.1'
   object ComboBox1: TComboBox
     Left = 72
-    Height = 29
+    Height = 35
     Top = 64
     Width = 100
     ItemHeight = 0
+    Items.Strings = (
+      '11'
+      '12'
+    )
     TabOrder = 0
-    Text = 'ComboBox1'
+    Text = '-1'
+  end
+  object Button1: TButton
+    Left = 72
+    Height = 25
+    Top = 159
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 1
   end
 end

@@ -1,18 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="25">
+    <Units Count="27">
       <Unit0>
         <Filename Value="showImage.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="showImage"/>
-        <EditorIndex Value="0"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="61" Y="10"/>
-        <UsageCount Value="116"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -23,10 +19,10 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uShowImage"/>
         <EditorIndex Value="1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="26"/>
-        <CursorPos X="11" Y="43"/>
-        <UsageCount Value="116"/>
+        <TopLine Value="32"/>
+        <CursorPos Y="43"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="121"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -35,347 +31,301 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="uSImgLoadLib"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="45"/>
-        <CursorPos X="23" Y="59"/>
-        <UsageCount Value="115"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="51"/>
+        <CursorPos X="61" Y="64"/>
+        <UsageCount Value="120"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="src/cv_types.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="cv_types"/>
-        <EditorIndex Value="3"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2"/>
-        <CursorPos X="3" Y="11"/>
-        <UsageCount Value="115"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="35"/>
+        <CursorPos Y="3"/>
+        <UsageCount Value="120"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="src/ushowimage.lfm"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="24" Y="6"/>
         <UsageCount Value="10"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit4>
       <Unit5>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/inc/dynlibs.pas"/>
-        <UnitName Value="dynlibs"/>
-        <EditorIndex Value="8"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="30"/>
         <CursorPos X="10" Y="37"/>
         <UsageCount Value="57"/>
-        <Loaded Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/unix/dynlibs.inc"/>
-        <EditorIndex Value="9"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="43"/>
         <CursorPos X="25" Y="52"/>
         <UsageCount Value="57"/>
-        <Loaded Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/unix/dl.pp"/>
-        <UnitName Value="dl"/>
-        <EditorIndex Value="10"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="70"/>
         <CursorPos X="80" Y="68"/>
         <UsageCount Value="46"/>
-        <Loaded Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="../../dfvision_proj/DFVision_Common/src/df_histogramchartpanel.pas"/>
         <UnitName Value="df_HistogramChartPanel"/>
-        <EditorIndex Value="22"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="15"/>
         <CursorPos X="6" Y="24"/>
         <UsageCount Value="59"/>
-        <Loaded Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="../../dfvision_proj/DFVision_Common/src/df_vision_types.pas"/>
-        <UnitName Value="df_vision_types"/>
-        <EditorIndex Value="23"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="250"/>
         <CursorPos X="53" Y="257"/>
         <UsageCount Value="59"/>
-        <Loaded Value="True"/>
       </Unit9>
       <Unit10>
         <Filename Value="../../dfvision_proj/DFVision_Common/src/TypeBufferTable.pas"/>
-        <UnitName Value="TypeBufferTable"/>
-        <EditorIndex Value="20"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="11"/>
         <CursorPos X="39" Y="21"/>
         <UsageCount Value="57"/>
-        <Loaded Value="True"/>
       </Unit10>
       <Unit11>
         <Filename Value="../../dfvision_proj/DFVision_Common/src/genericlist.pas"/>
         <UnitName Value="GenericList"/>
-        <EditorIndex Value="21"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="186"/>
         <CursorPos X="16" Y="172"/>
         <UsageCount Value="57"/>
-        <Loaded Value="True"/>
       </Unit11>
       <Unit12>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/packages/univint/src/Files.pas"/>
-        <UnitName Value="Files"/>
-        <EditorIndex Value="19"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="10842"/>
-        <CursorPos X="1" Y="1"/>
         <UsageCount Value="57"/>
-        <Loaded Value="True"/>
       </Unit12>
       <Unit13>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/objpas/sysutils/filutilh.inc"/>
-        <EditorIndex Value="14"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="80"/>
         <CursorPos X="10" Y="94"/>
         <UsageCount Value="57"/>
-        <Loaded Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
-        <EditorIndex Value="12"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="28"/>
         <CursorPos X="4" Y="37"/>
         <UsageCount Value="56"/>
-        <Loaded Value="True"/>
       </Unit14>
       <Unit15>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/linux/sysosh.inc"/>
-        <EditorIndex Value="13"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="12"/>
         <CursorPos X="3" Y="21"/>
         <UsageCount Value="56"/>
-        <Loaded Value="True"/>
       </Unit15>
       <Unit16>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
-        <EditorIndex Value="11"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="271"/>
         <CursorPos X="3" Y="280"/>
         <UsageCount Value="56"/>
-        <Loaded Value="True"/>
       </Unit16>
       <Unit17>
         <Filename Value="../../dfvision_proj/DFVision_Common/src/ThumbnailImage.pas"/>
-        <UnitName Value="ThumbnailImage"/>
-        <EditorIndex Value="7"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="508"/>
         <CursorPos X="13" Y="524"/>
         <UsageCount Value="56"/>
-        <Loaded Value="True"/>
       </Unit17>
       <Unit18>
         <Filename Value="../../dfvision_proj/DFVision_Common/src/df_imageshowinterfaces.pas"/>
-        <UnitName Value="df_imageshowinterfaces"/>
-        <EditorIndex Value="6"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1199"/>
         <CursorPos X="34" Y="1213"/>
         <UsageCount Value="56"/>
-        <Loaded Value="True"/>
       </Unit18>
       <Unit19>
         <Filename Value="../../dfvision_proj/DFVision_Common/src/df_idrecogengineinterface.pas"/>
-        <UnitName Value="df_idrecogengineinterface"/>
-        <EditorIndex Value="5"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="47"/>
-        <Loaded Value="True"/>
       </Unit19>
       <Unit20>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/unix/sysutils.pp"/>
-        <UnitName Value="sysutils"/>
-        <EditorIndex Value="15"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="550"/>
         <CursorPos X="3" Y="554"/>
         <UsageCount Value="39"/>
-        <Loaded Value="True"/>
       </Unit20>
       <Unit21>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/unix/bunxovlh.inc"/>
-        <EditorIndex Value="16"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="29"/>
         <CursorPos X="11" Y="43"/>
         <UsageCount Value="38"/>
-        <Loaded Value="True"/>
       </Unit21>
       <Unit22>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/unix/bunxovl.inc"/>
-        <EditorIndex Value="17"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="126"/>
         <CursorPos X="3" Y="128"/>
         <UsageCount Value="38"/>
-        <Loaded Value="True"/>
       </Unit22>
       <Unit23>
         <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/unix/bunxh.inc"/>
-        <EditorIndex Value="18"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="68"/>
         <CursorPos X="15" Y="82"/>
         <UsageCount Value="38"/>
-        <Loaded Value="True"/>
       </Unit23>
       <Unit24>
         <Filename Value="/usr/lib/codetyphon/lazarus/lcl/include/customform.inc"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="965"/>
         <CursorPos X="49" Y="978"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit24>
+      <Unit25>
+        <Filename Value="/DF_Vision_SDK/linuxbin/pkgconfig/opencv.pc"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/inc/dynlibs.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="117"/>
+        <CursorPos X="39" Y="124"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit26>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="0"/>
-    </General>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="44" Column="41" TopLine="34"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="37" TopLine="23"/>
       </Position1>
       <Position2>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="47" Column="1" TopLine="34"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="64" TopLine="51"/>
       </Position2>
       <Position3>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="48" Column="1" TopLine="34"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="65" TopLine="51"/>
       </Position3>
       <Position4>
         <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="49" Column="1" TopLine="28"/>
+        <Caret Line="42" TopLine="32"/>
       </Position4>
       <Position5>
         <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="47" Column="1" TopLine="32"/>
+        <Caret Line="43" TopLine="32"/>
       </Position5>
       <Position6>
-        <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="16" Column="48" TopLine="3"/>
+        <Filename Value="src/ushowimage.pas"/>
+        <Caret Line="39" Column="48" TopLine="32"/>
       </Position6>
       <Position7>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="47" Column="1" TopLine="32"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="64" TopLine="51"/>
       </Position7>
       <Position8>
         <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="62" Column="1" TopLine="46"/>
+        <Caret Line="65" TopLine="51"/>
       </Position8>
       <Position9>
-        <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="63" Column="1" TopLine="46"/>
+        <Filename Value="src/ushowimage.pas"/>
+        <Caret Line="42" TopLine="32"/>
       </Position9>
       <Position10>
         <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="41" Column="1" TopLine="32"/>
+        <Caret Line="43" TopLine="32"/>
       </Position10>
       <Position11>
         <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="42" Column="1" TopLine="32"/>
+        <Caret Line="40" Column="46" TopLine="32"/>
       </Position11>
       <Position12>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="43" Column="1" TopLine="32"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="64" TopLine="51"/>
       </Position12>
       <Position13>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="44" Column="1" TopLine="32"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="65" TopLine="51"/>
       </Position13>
       <Position14>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="38" Column="67" TopLine="32"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="64" TopLine="51"/>
       </Position14>
       <Position15>
         <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="62" Column="1" TopLine="46"/>
+        <Caret Line="65" TopLine="51"/>
       </Position15>
       <Position16>
         <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="41" Column="1" TopLine="32"/>
+        <Caret Line="42" TopLine="32"/>
       </Position16>
       <Position17>
         <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="42" Column="1" TopLine="32"/>
+        <Caret Line="43" TopLine="32"/>
       </Position17>
       <Position18>
         <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="43" Column="2" TopLine="26"/>
+        <Caret Line="44" TopLine="32"/>
       </Position18>
       <Position19>
         <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="67" Column="41" TopLine="45"/>
+        <Caret Line="64" TopLine="51"/>
       </Position19>
       <Position20>
-        <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="62" Column="1" TopLine="45"/>
+        <Filename Value="src/ushowimage.pas"/>
+        <Caret Line="42" TopLine="32"/>
       </Position20>
       <Position21>
-        <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="63" Column="1" TopLine="45"/>
+        <Filename Value="src/ushowimage.pas"/>
+        <Caret Line="43" TopLine="32"/>
       </Position21>
       <Position22>
-        <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="64" Column="1" TopLine="45"/>
+        <Filename Value="src/ushowimage.pas"/>
+        <Caret Line="44" TopLine="32"/>
       </Position22>
       <Position23>
         <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="65" Column="1" TopLine="45"/>
+        <Caret Line="64" TopLine="51"/>
       </Position23>
       <Position24>
         <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="66" Column="1" TopLine="45"/>
+        <Caret Line="65" TopLine="51"/>
       </Position24>
       <Position25>
-        <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="67" Column="1" TopLine="45"/>
+        <Filename Value="src/ushowimage.pas"/>
+        <Caret Line="42" TopLine="32"/>
       </Position25>
       <Position26>
-        <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="68" Column="1" TopLine="45"/>
+        <Filename Value="src/ushowimage.pas"/>
+        <Caret Line="43" TopLine="32"/>
       </Position26>
       <Position27>
         <Filename Value="src/usimgloadlib.pas"/>
-        <Caret Line="69" Column="1" TopLine="46"/>
+        <Caret Line="64" TopLine="51"/>
       </Position27>
       <Position28>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="41" Column="1" TopLine="26"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="35" TopLine="24"/>
       </Position28>
       <Position29>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="42" Column="1" TopLine="26"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="36" TopLine="24"/>
       </Position29>
       <Position30>
-        <Filename Value="src/ushowimage.pas"/>
-        <Caret Line="43" Column="11" TopLine="26"/>
+        <Filename Value="src/usimgloadlib.pas"/>
+        <Caret Line="39" TopLine="24"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
@@ -386,16 +336,15 @@
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="src/usimgloadlib.pas"/>
-        <Line Value="62"/>
+        <Line Value="64"/>
       </Item1>
       <Item2>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="src/ushowimage.pas"/>
-        <Line Value="41"/>
+        <Line Value="42"/>
       </Item2>
     </BreakPoints>
   </Debugging>
-  <EditorMacros Count="0"/>
 </CONFIG>
