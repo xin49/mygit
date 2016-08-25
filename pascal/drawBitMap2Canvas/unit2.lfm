@@ -1,0 +1,17 @@
+object Form2: TForm2
+  Left = 504
+  Height = 570
+  Top = 222
+  Width = 641
+  Caption = 'Form2'
+  ClientHeight = 570
+  ClientWidth = 641
+  LCLVersion = '1.6.0.4'
+  object Shape1: TShape
+    Left = 80
+    Height = 65
+    Top = 120
+    Width = 72
+    Brush.Color = 1447678
+  end
+end

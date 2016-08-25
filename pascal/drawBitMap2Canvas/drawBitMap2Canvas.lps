@@ -3,15 +3,14 @@
   <ProjectSession>
     <Version Value="9"/>
     <BuildModes Active="Default"/>
-    <Units Count="11">
+    <Units Count="36">
       <Unit0>
         <Filename Value="drawBitMap2Canvas.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="21"/>
+        <EditorIndex Value="4"/>
+        <CursorPos Y="16"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="unit1.pas"/>
@@ -21,219 +20,430 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="37"/>
-        <CursorPos Y="45"/>
-        <UsageCount Value="21"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="86"/>
+        <CursorPos X="10" Y="107"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
-        <Filename Value="/media/root/Software/lazarus/lcl/graphics.pp"/>
-        <UnitName Value="Graphics"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="256"/>
-        <CursorPos X="25" Y="255"/>
-        <UsageCount Value="10"/>
+        <Filename Value="unit2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit2"/>
+        <EditorIndex Value="6"/>
+        <UsageCount Value="28"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
+        <Filename Value="/media/root/Software/lazarus/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="1444"/>
+        <CursorPos X="15" Y="1458"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
         <Filename Value="/media/root/Software/lazarus/lcl/include/rasterimage.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="467"/>
         <CursorPos X="3" Y="474"/>
         <UsageCount Value="10"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="/media/root/Software/lazarus/lcl/graphtype.pp"/>
-        <UnitName Value="GraphType"/>
-        <EditorIndex Value="8"/>
-        <TopLine Value="93"/>
-        <CursorPos X="5" Y="108"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="212"/>
-        <CursorPos X="10" Y="214"/>
-        <UsageCount Value="10"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/graphtype.pp"/>
+        <UnitName Value="GraphType"/>
+        <EditorIndex Value="32"/>
+        <TopLine Value="84"/>
+        <CursorPos X="13" Y="96"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
-        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
-        <UnitName Value="IntfGraphics"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="767"/>
-        <CursorPos Y="779"/>
-        <UsageCount Value="10"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="207"/>
+        <CursorPos X="33" Y="224"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/lclintfh.inc"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="90"/>
-        <CursorPos X="10" Y="105"/>
-        <UsageCount Value="10"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
+        <UnitName Value="IntfGraphics"/>
+        <EditorIndex Value="18"/>
+        <TopLine Value="774"/>
+        <CursorPos X="3" Y="776"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit7>
       <Unit8>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/intfbaselcl.inc"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="236"/>
-        <CursorPos X="10" Y="254"/>
-        <UsageCount Value="10"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/lclintfh.inc"/>
+        <EditorIndex Value="19"/>
+        <TopLine Value="90"/>
+        <CursorPos X="10" Y="105"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit8>
       <Unit9>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/lclintf.inc"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="162"/>
-        <CursorPos Y="178"/>
-        <UsageCount Value="10"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/intfbaselcl.inc"/>
+        <EditorIndex Value="29"/>
+        <TopLine Value="247"/>
+        <CursorPos Y="271"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit9>
       <Unit10>
-        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="589"/>
-        <CursorPos Y="663"/>
-        <UsageCount Value="10"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/lclintf.inc"/>
+        <EditorIndex Value="20"/>
+        <TopLine Value="171"/>
+        <CursorPos Y="177"/>
+        <UsageCount Value="18"/>
         <Loaded Value="True"/>
       </Unit10>
+      <Unit11>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
+        <EditorIndex Value="28"/>
+        <TopLine Value="591"/>
+        <CursorPos X="18" Y="604"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk3/gtk3lclintfh.inc"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="11"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk3/gtk3lclintf.inc"/>
+        <EditorIndex Value="21"/>
+        <TopLine Value="572"/>
+        <CursorPos X="148" Y="579"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/fpgui/fpguiwsdialogs.pp"/>
+        <UnitName Value="FpGuiWSDialogs"/>
+        <EditorIndex Value="24"/>
+        <TopLine Value="18"/>
+        <CursorPos X="90" Y="32"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/inc/systemh.inc"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="740"/>
+        <CursorPos X="11" Y="754"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/win32/win32lclintfh.inc"/>
+        <EditorIndex Value="30"/>
+        <TopLine Value="41"/>
+        <CursorPos X="10" Y="61"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/win32/win32lclintf.inc"/>
+        <EditorIndex Value="31"/>
+        <TopLine Value="150"/>
+        <CursorPos X="26" Y="123"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/customdrawn/customdrawnlclintf.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="681"/>
+        <CursorPos X="23" Y="693"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/fpgui/fpguilclintf.inc"/>
+        <EditorIndex Value="22"/>
+        <TopLine Value="99"/>
+        <CursorPos X="28" Y="124"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk/gtklclintfh.inc"/>
+        <EditorIndex Value="23"/>
+        <TopLine Value="30"/>
+        <CursorPos X="10" Y="52"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/winapi.inc"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="30"/>
+        <CursorPos X="10" Y="45"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/win32/win32winapi.inc"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="3611"/>
+        <CursorPos X="87" Y="3618"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../../../../下载/fpgui-1.4.1/src/corelib/fpg_base.pas"/>
+        <EditorIndex Value="27"/>
+        <TopLine Value="3"/>
+        <CursorPos Y="18"/>
+        <UsageCount Value="16"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="/media/root/Software/lazarus/components/fpgui-1.4.1/src/corelib/fpg_constants.pas"/>
+        <EditorIndex Value="25"/>
+        <TopLine Value="80"/>
+        <CursorPos X="62" Y="85"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="/media/root/Software/lazarus/components/fpgui-1.4.1/src/VERSION_FILE.inc"/>
+        <EditorIndex Value="26"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="/media/root/Software/lazarus/components/fpgui-1.4.1/src/corelib/x11/fpg_x11.pas"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="2944"/>
+        <CursorPos Y="2958"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/canvas.inc"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="1676"/>
+        <CursorPos Y="1698"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="/media/root/Software/lazarus/lcl/lclproc.pas"/>
+        <UnitName Value="LCLProc"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="887"/>
+        <CursorPos Y="902"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="/media/root/Software/lazarus/lcl/extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <TopLine Value="1003"/>
+        <CursorPos X="17" Y="1011"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/custompanel.inc"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="3" Y="26"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="/media/root/Software/lazarus/lcl/controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="2245"/>
+        <CursorPos X="15" Y="2259"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/customcontrol.inc"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="64"/>
+        <CursorPos X="3" Y="73"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="/media/root/Software/lazarus/lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="565"/>
+        <CursorPos X="17" Y="579"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/customform.inc"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="3061"/>
+        <CursorPos X="3" Y="3069"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="/media/root/Software/lazarus/lcl/lcltype.pp"/>
+        <UnitName Value="LCLType"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="94"/>
+        <CursorPos X="3" Y="109"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit35>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/lclintf.inc"/>
-        <Caret Line="177" TopLine="162"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="57" TopLine="49"/>
       </Position1>
       <Position2>
-        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <Caret Line="564" TopLine="552"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="71" TopLine="49"/>
       </Position2>
       <Position3>
-        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <Caret Line="570" TopLine="552"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="58" Column="40" TopLine="52"/>
       </Position3>
       <Position4>
-        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <Caret Line="576" TopLine="555"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="55" TopLine="49"/>
       </Position4>
       <Position5>
-        <Filename Value="unit1.pas"/>
-        <Caret Line="44" Column="26" TopLine="37"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
+        <Caret Line="313" TopLine="297"/>
       </Position5>
       <Position6>
-        <Filename Value="unit1.pas"/>
-        <Caret Line="45" TopLine="37"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
+        <Caret Line="182" TopLine="221"/>
       </Position6>
       <Position7>
         <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
-        <Caret Line="313" TopLine="298"/>
+        <Caret Line="229" TopLine="222"/>
       </Position7>
       <Position8>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
-        <Caret Line="182" TopLine="167"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
+        <Caret Line="776" TopLine="770"/>
       </Position8>
       <Position9>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
-        <Caret Line="229" TopLine="215"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
+        <Caret Line="777" TopLine="770"/>
       </Position9>
       <Position10>
         <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
-        <Caret Line="776" TopLine="767"/>
+        <Caret Line="778" TopLine="770"/>
       </Position10>
       <Position11>
         <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
-        <Caret Line="777" TopLine="767"/>
+        <Caret Line="783" TopLine="770"/>
       </Position11>
       <Position12>
-        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
-        <Caret Line="778" TopLine="767"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/lclintf.inc"/>
+        <Caret Line="177" TopLine="171"/>
       </Position12>
       <Position13>
-        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
-        <Caret Line="783" TopLine="767"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
+        <Caret Line="564" TopLine="548"/>
       </Position13>
       <Position14>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/lclintf.inc"/>
-        <Caret Line="177" TopLine="162"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
+        <Caret Line="570" TopLine="554"/>
       </Position14>
       <Position15>
         <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <Caret Line="564" TopLine="555"/>
+        <Caret Line="572" TopLine="554"/>
       </Position15>
       <Position16>
-        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <Caret Line="570" TopLine="555"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="56" TopLine="49"/>
       </Position16>
       <Position17>
-        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <Caret Line="572" TopLine="565"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
+        <Caret Line="168" TopLine="152"/>
       </Position17>
       <Position18>
-        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <Caret Line="573" TopLine="565"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="56" Column="15" TopLine="42"/>
       </Position18>
       <Position19>
-        <Filename Value="/media/root/Software/lazarus/lcl/interfaces/gtk2/gtk2lclintf.inc"/>
-        <Caret Line="663" TopLine="589"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="63" Column="40" TopLine="42"/>
       </Position19>
       <Position20>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/lclintf.inc"/>
-        <Caret Line="178" TopLine="162"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
+        <Caret Line="313" Column="3" TopLine="307"/>
       </Position20>
       <Position21>
-        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
-        <Caret Line="789" TopLine="767"/>
+        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
+        <Caret Line="224" Column="33" TopLine="207"/>
       </Position21>
       <Position22>
-        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
-        <Caret Line="791" TopLine="767"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="86" Column="9" TopLine="60"/>
       </Position22>
       <Position23>
-        <Filename Value="/media/root/Software/lazarus/lcl/intfgraphics.pas"/>
-        <Caret Line="779" TopLine="767"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="87" Column="35" TopLine="72"/>
       </Position23>
       <Position24>
         <Filename Value="unit1.pas"/>
-        <Caret Line="44" Column="29" TopLine="37"/>
+        <Caret Line="52" TopLine="64"/>
       </Position24>
       <Position25>
         <Filename Value="unit1.pas"/>
-        <Caret Line="45" TopLine="37"/>
+        <Caret Line="90" TopLine="80"/>
       </Position25>
       <Position26>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
-        <Caret Line="229" TopLine="212"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="106" Column="36" TopLine="71"/>
       </Position26>
       <Position27>
         <Filename Value="unit1.pas"/>
-        <Caret Line="45" TopLine="37"/>
+        <Caret Line="101" Column="73" TopLine="80"/>
       </Position27>
       <Position28>
-        <Filename Value="unit1.pas"/>
-        <Caret Line="53" Column="72" TopLine="37"/>
+        <Filename Value="drawBitMap2Canvas.lpr"/>
+        <Caret Line="16"/>
       </Position28>
       <Position29>
         <Filename Value="unit1.pas"/>
-        <Caret Line="45" TopLine="37"/>
+        <Caret Line="96" TopLine="80"/>
       </Position29>
       <Position30>
-        <Filename Value="/media/root/Software/lazarus/lcl/include/custombitmap.inc"/>
-        <Caret Line="229" TopLine="212"/>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="107" Column="17" TopLine="77"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
   <Debugging>
-    <BreakPoints Count="1">
+    <BreakPoints Count="2">
       <Item1>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
-        <Source Value="unit1.pas"/>
-        <Line Value="45"/>
+        <Source Value="/media/root/Software/lazarus/lcl/interfaces/gtk3/gtk3lclintf.inc"/>
+        <Line Value="690"/>
       </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="/media/root/Software/lazarus/lcl/interfaces/gtk3/gtk3lclintf.inc"/>
+        <Line Value="687"/>
+      </Item2>
     </BreakPoints>
   </Debugging>
 </CONFIG>

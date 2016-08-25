@@ -140,4 +140,8 @@ linux opencv cvLoadImage(filename, 1) load png fail:
 #define MY_CEILING(n, x)
     (x%n+n-1)/n*n+x/n*n
     (x%n+n-1+x)
+
+2016-08-24 三 08:53 上午
+2. canvas draw the gray image
+pImgData+col+((row>>3))
 ----------------------------------------------------------
