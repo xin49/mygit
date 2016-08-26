@@ -6,7 +6,10 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  GraphType, StdCtrls, Buttons
+  GraphType, StdCtrls, Buttons, LCLType,
+  ctypes,
+  linux,
+  Baseunix
   ;
 
 type
@@ -87,24 +90,44 @@ var
   pImgData:PByte;
   aRawImg:TRawImage;
   aRImgDes:TRawImageDescription;
+  hdcTmp:HDC;
+  t1, t2, fq:timespec;
+  j : Integer;
+  sum:Double=0.0;
+  curTime:Double;
 begin
-  aRawImg:=aBmp.RawImage;
-  aRImgDes := aRawImg.Description;
-  imgHeight := aRImgDes.Height;
-  imgWidth := aRImgDes.Width;
-  widthstep := aRImgDes.BytesPerLine;
-  pImgData := aRawImg.Data;
-  imgSize := aRawImg.DataSize;
-  for i:=0 to imgHeight div 2 -1 do
+  for j := 0 to 10000 do
   begin
-    FillChar(pImgData^, imgWidth, char(grey));
-    pImgData := pImgData + widthstep;
+    aRawImg:=aBmp.RawImage;
+    aRImgDes := aRawImg.Description;
+    imgHeight := aRImgDes.Height;
+    imgWidth := aRImgDes.Width;
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, @t1);
+    aBmp.FreeImage;
+    aBmp.SetSize(imgWidth, imgHeight);
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, @t2);
+    curTime := (t2.tv_sec - t1.tv_sec) * 1000000 + (t2.tv_nsec - t1.tv_nsec) / 1000;
+    WriteLn('used time=' + FloatToStr(curTime));
+    sum := sum + curTime;
+    aRawImg:=aBmp.RawImage;
+    aRImgDes := aRawImg.Description;
+    imgHeight := aRImgDes.Height;
+    imgWidth := aRImgDes.Width;
+    widthstep := aRImgDes.BytesPerLine;
+    pImgData := aRawImg.Data;
+    imgSize := aRawImg.DataSize;
+    for i:=0 to imgHeight div 2 -1 do
+    begin
+      FillChar(pImgData^, imgWidth, char(grey));
+      pImgData := pImgData + widthstep;
+    end;
+    Panel2.Canvas.Draw(0, 0, aBmp);
+	  if (grey) = 255 then
+      grey := 0
+    else
+      grey := 255;
   end;
-  Panel2.Canvas.Draw(0, 0, aBmp);
-	if (grey) = 255 then
-    grey := 0
-  else
-    grey := 255;
+  WriteLn('avea time=' + FloatToStr(sum/10000));
 end;
 
 procedure TForm1.Panel2Paint(Sender:TObject);
