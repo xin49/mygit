@@ -13,6 +13,19 @@
 
 using namespace std;
 
+timespec diff(timespec start, timespec end)
+{
+timespec temp;
+if ((end.tv_nsec-start.tv_nsec)<0) {
+temp.tv_sec = end.tv_sec-start.tv_sec-1;
+temp.tv_nsec = 1000000000+end.tv_nsec-start.tv_nsec;
+} else {
+temp.tv_sec = end.tv_sec-start.tv_sec;
+temp.tv_nsec = end.tv_nsec-start.tv_nsec;
+}
+return temp;
+}
+
 int main()
 {
 /* test malloc, Pointer, free
@@ -33,12 +46,24 @@ int main()
     //out of memory limit, crash at free memory
     free(pIntTmp);
 */
+/*
     IplImage* pImgSrc = cvLoadImage("/root/图片/Taissa-Farmiga-29.jpg");
     cvSaveImage("pImgSrc.jpg", pImgSrc);
+*/
+    timespec time1, time2;
+    int temp;
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
+    for(int j = 0; j < 10; j++)
+        for (int i = 0; i< 242000000; i++)
+            temp+=temp;
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
+    cout<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
 
     return 0;
 }
 //note
 //malloc(size) just create size byte memory with void*(Pointer)
 //use memory as array with array type(int*, char*, float* ......)
+//
+//Test clock_gettime
 

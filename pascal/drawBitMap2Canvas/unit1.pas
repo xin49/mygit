@@ -30,9 +30,10 @@ type
   private
     { private declarations }
   public
-    aBmp:TBitMap;
-    grey:Integer;
+    aBmpColor:TBitMap;
+    aBmpGray:TBitMap;
     { public declarations }
+    procedure SetBitMapMem(aBitMap:TBitMap; memVal:Byte);
   end;
 
 var
@@ -53,25 +54,26 @@ var
   aRawImg:TRawImage;
   aRImgDes:TRawImageDescription;
 begin
-  aBmp := TBitMap.Create;
-  //aBmp.LoadFromFile('/root/图片/spheres.bmp');
-  aBmp.PixelFormat := pf8bit;
-  aBmp.SetSize(125, 125);
-  aRawImg:=aBmp.RawImage;
-  aRImgDes := aRawImg.Description;
-  imgHeight := aRImgDes.Height;
-  imgWidth := aRImgDes.Width;
-  widthstep := aRImgDes.BytesPerLine;
-  pImgData := aRawImg.Data;
-  imgSize := aRawImg.DataSize;
-  grey := 255;
-
-  //set TBitMap content
-  //for i:=0 to 64-1 do
-  //begin
-  //  Pointer(pTmp):=(aBmp.ScanLine[i]);
-  //  FillChar(pTmp^, 125, char(255));
-  //end;
+	aBmpGray := TBitMap.Create;
+  with aBmpGray do
+  begin
+		PixelFormat := pf8bit;
+ 		SetSize(10000, 10000);
+  end;
+	aBmpColor := TBitMap.Create;
+  with aBmpColor do
+  begin
+		PixelFormat := pf24bit;
+ 		SetSize(10000, 10000);
+  end;
+  aRawImg := aBmpGray.RawImage;
+  FillChar(aRawImg.Data^, aRawImg.DataSize, Char(255));
+  aRawImg := aBmpColor.RawImage;
+  FillChar(aRawImg.Data^, aRawImg.DataSize, Char(255));
+  aRawImg := aBmpGray.RawImage;
+  WriteLn('ABmpGray ImgSize:' + IntToStr(aRawImg.DataSize));
+  aRawImg := aBmpColor.RawImage;
+  WriteLn('ABmpColor ImgSize:' + IntToStr(aRawImg.DataSize));
 end;
 
 procedure TForm1.FormPaint(Sender:TObject);
@@ -83,6 +85,8 @@ begin
 end;
 
 procedure TForm1.Button1Click(Sender:TObject);
+Label
+  DRAW_BTMMAP;
 var
   i:Integer;
   widthstep, imgSize, imgWidth, imgHeight:Integer;
@@ -91,48 +95,54 @@ var
   aRawImg:TRawImage;
   aRImgDes:TRawImageDescription;
   hdcTmp:HDC;
-  t1, t2, fq:timespec;
+  t1, t2, t3, t4:timespec;
   j : Integer;
-  sum:Double=0.0;
-  curTime:Double;
+  grayTime, colorTime, useTime, allTime:Double;
+  aBmpTmp:TBitMap;
+  aMemVal:Byte;
 begin
-  for j := 0 to 10000 do
+  clock_gettime(CLOCK_REALTIME, @t3);
+  aBmpTmp := aBmpGray;
+	aMemVal := Byte(0);
+DRAW_BTMMAP:
+  clock_gettime(CLOCK_REALTIME, @t1);
+	for i:=0 to 100-1 do
   begin
-    aRawImg:=aBmp.RawImage;
-    aRImgDes := aRawImg.Description;
-    imgHeight := aRImgDes.Height;
-    imgWidth := aRImgDes.Width;
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, @t1);
-    aBmp.FreeImage;
-    aBmp.SetSize(imgWidth, imgHeight);
-    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, @t2);
-    curTime := (t2.tv_sec - t1.tv_sec) * 1000000 + (t2.tv_nsec - t1.tv_nsec) / 1000;
-    WriteLn('used time=' + FloatToStr(curTime));
-    sum := sum + curTime;
-    aRawImg:=aBmp.RawImage;
-    aRImgDes := aRawImg.Description;
-    imgHeight := aRImgDes.Height;
-    imgWidth := aRImgDes.Width;
-    widthstep := aRImgDes.BytesPerLine;
-    pImgData := aRawImg.Data;
-    imgSize := aRawImg.DataSize;
-    for i:=0 to imgHeight div 2 -1 do
-    begin
-      FillChar(pImgData^, imgWidth, char(grey));
-      pImgData := pImgData + widthstep;
-    end;
-    Panel2.Canvas.Draw(0, 0, aBmp);
-	  if (grey) = 255 then
-      grey := 0
-    else
-      grey := 255;
+    SetBitMapMem(aBmpTmp, aMemVal);
+    Panel2.Canvas.Draw(0, 0, aBmpTmp);
+    aMemVal := Not(aMemVal);
   end;
-  WriteLn('avea time=' + FloatToStr(sum/10000));
+  clock_gettime(CLOCK_REALTIME, @t2);
+  //if (aBmpTmp = aBmpGray) then
+  //begin
+  //  grayTime := (t2.tv_sec - t1.tv_sec) * 1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000;
+  //  aBmpTmp := aBmpGray;
+  //  goto DRAW_BTMMAP;
+  //end
+  //else
+  //begin
+  //	colorTime := (t2.tv_sec - t1.tv_sec) * 1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000;
+  //end;
+  useTime := (t2.tv_sec - t1.tv_sec) * 1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000;
+  WriteLn('useTime:' + FloatToStr(useTime));
+  //WriteLn('grayTime:' + FloatToStr(grayTime));
+  //WriteLn('colorTime:' + FloatToStr(colorTime));
+  clock_gettime(CLOCK_REALTIME, @t4);
+	allTime := (t4.tv_sec - t3.tv_sec) * 1000 + (t4.tv_nsec - t3.tv_nsec) / 1000000;
+  WriteLn('allTime:' + FloatToStr(allTime));
+  WriteLn('///////////////////////////////////////////////');
 end;
 
 procedure TForm1.Panel2Paint(Sender:TObject);
 begin
-  //Panel2.Canvas.Draw(0, 0, aBmp);
+end;
+
+procedure TForm1.SetBitMapMem(aBitMap:TBitMap; memVal:Byte);
+var
+  aRawImg:TRawImage;
+begin
+	aRawImg := aBitMap.RawImage;
+  FillChar(aRawImg.Data^, aRawImg.DataSize, memVal);
 end;
 
 end.

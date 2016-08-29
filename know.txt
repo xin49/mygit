@@ -82,6 +82,31 @@ gtk2 show image can you transf, offset, mirror, and roi:
 Geometric Image Transformations:
     Rotation, Scale, Offset, Mirror
     Rotation:
+
+why gtk and else GUI not supported gray image
+    1. gtk 24bit image is 4 channel
+    2. same color image canvas.draw has difference time
+        ///////////////////////////////////////////////
+        grayTime:3.906403
+        colorTime:190.585059
+        allTime:194.51528
+        ///////////////////////////////////////////////
+        grayTime:4.173624
+        colorTime:185.424886
+        allTime:189.620188
+        ///////////////////////////////////////////////
+        grayTime:3.152875
+        colorTime:153.781447
+        allTime:156.964283
+        ///////////////////////////////////////////////
+        grayTime:4.529219
+        colorTime:196.169126
+        allTime:200.720613
+        ///////////////////////////////////////////////
+        grayTime:4.259519
+        colorTime:185.500574
+        allTime:189.792568
+        ///////////////////////////////////////////////
 ----------------------------------------------------------
 
 ----------------------script------------------------------
