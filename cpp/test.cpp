@@ -62,8 +62,10 @@ int main()
     return 0;
 }
 //note
+
 //malloc(size) just create size byte memory with void*(Pointer)
 //use memory as array with array type(int*, char*, float* ......)
-//
+
 //Test clock_gettime
 
+//test opencv
