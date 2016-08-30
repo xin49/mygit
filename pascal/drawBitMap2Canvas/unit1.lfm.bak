@@ -1,0 +1,97 @@
+object Form1: TForm1
+  Left = 367
+  Height = 591
+  Top = 114
+  Width = 811
+  ActiveControl = Panel1
+  Caption = 'Form1'
+  ClientHeight = 591
+  ClientWidth = 811
+  OnCreate = FormCreate
+  OnPaint = FormPaint
+  LCLVersion = '1.6.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 591
+    Top = 0
+    Width = 272
+    Align = alLeft
+    Caption = 'Panel1'
+    ClientHeight = 591
+    ClientWidth = 272
+    TabOrder = 0
+    OnPaint = Panel1Paint
+    object Button1: TButton
+      Left = 16
+      Height = 25
+      Top = 120
+      Width = 75
+      Caption = 'Button1'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object BitBtn1: TBitBtn
+      Left = 16
+      Height = 30
+      Top = 160
+      Width = 75
+      Caption = 'BitBtn1'
+      OnClick = BitBtn1Click
+      TabOrder = 1
+    end
+    object Shape1: TShape
+      Left = 16
+      Height = 65
+      Top = 16
+      Width = 65
+      Brush.Color = clLime
+    end
+    object Button2: TButton
+      Left = 132
+      Height = 25
+      Top = 120
+      Width = 75
+      Caption = 'Button2'
+      OnClick = Button2Click
+      TabOrder = 2
+    end
+    object BitBtn2: TBitBtn
+      Left = 132
+      Height = 30
+      Top = 160
+      Width = 75
+      Caption = 'BitBtn2'
+      OnClick = BitBtn2Click
+      TabOrder = 3
+    end
+    object Button3: TButton
+      Left = 16
+      Height = 25
+      Top = 206
+      Width = 75
+      Caption = 'Button3'
+      OnClick = Button3Click
+      TabOrder = 4
+    end
+    object Button4: TButton
+      Left = 132
+      Height = 25
+      Top = 206
+      Width = 75
+      Caption = 'Button4'
+      OnClick = Button4Click
+      TabOrder = 5
+    end
+  end
+  object Panel2: TPanel
+    Left = 272
+    Height = 591
+    Top = 0
+    Width = 539
+    Align = alClient
+    Caption = 'Panel2'
+    Color = 1052899
+    ParentColor = False
+    TabOrder = 1
+  end
+end
