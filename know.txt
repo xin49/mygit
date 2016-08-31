@@ -207,5 +207,20 @@ linux opencv cvLoadImage(filename, 1) load png fail:
 pImgData+col+((row>>3))
 2016-08-26 五 10:55 上午
 DF_dv_ColorModelConvertorPixelwise
+
+diff:0. set viewRC info
+1. copy viewRCBmp
+2. canvas.draw
+
+UI Show:
+   1. imgSrc info 
+   2. Scaled Size
+   3. panel size view size
+   4. start pointer view left
+
+calc:
+    1. widLimit, heiLimit
+        view size
 ----------------------------------------------------------
+
 
