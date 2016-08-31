@@ -1,0 +1,143 @@
+object Form1: TForm1
+  Left = 182
+  Height = 680
+  Top = 38
+  Width = 1108
+  Caption = 'Form1'
+  ClientHeight = 680
+  ClientWidth = 1108
+  OnCreate = FormCreate
+  LCLVersion = '1.6.0.4'
+  object Panel1: TPanel
+    Left = 0
+    Height = 680
+    Top = 0
+    Width = 1108
+    Align = alClient
+    Caption = 'Panel1'
+    ClientHeight = 680
+    ClientWidth = 1108
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 1
+      Height = 678
+      Top = 1
+      Width = 719
+      Align = alLeft
+      Caption = 'Panel2'
+      TabOrder = 0
+    end
+    object Panel3: TPanel
+      Left = 720
+      Height = 678
+      Top = 1
+      Width = 387
+      Align = alClient
+      Caption = 'Panel3'
+      ClientHeight = 678
+      ClientWidth = 387
+      TabOrder = 1
+      object Button1: TButton
+        Left = 48
+        Height = 25
+        Top = 32
+        Width = 75
+        Caption = 'btnColor'
+        OnClick = Button1Click
+        TabOrder = 0
+      end
+      object Button2: TButton
+        Left = 48
+        Height = 25
+        Top = 80
+        Width = 75
+        Caption = 'btnGray'
+        OnClick = Button2Click
+        TabOrder = 1
+      end
+      object Button3: TButton
+        Left = 48
+        Height = 25
+        Top = 128
+        Width = 75
+        Caption = 'Button3'
+        OnClick = Button3Click
+        TabOrder = 2
+      end
+      object GroupBox1: TGroupBox
+        Left = 184
+        Height = 161
+        Top = 24
+        Width = 216
+        Caption = 'createDraw'
+        ClientHeight = 142
+        ClientWidth = 212
+        TabOrder = 3
+        object Button4: TButton
+          Left = 48
+          Height = 25
+          Top = 16
+          Width = 75
+          Caption = 'Button4'
+          OnClick = Button4Click
+          TabOrder = 0
+        end
+        object Button5: TButton
+          Left = 48
+          Height = 25
+          Top = 56
+          Width = 75
+          Caption = 'Button5'
+          TabOrder = 1
+        end
+        object Button6: TButton
+          Left = 48
+          Height = 25
+          Top = 101
+          Width = 75
+          Caption = 'Button6'
+          OnClick = Button6Click
+          TabOrder = 2
+        end
+      end
+      object GroupBox2: TGroupBox
+        Left = 55
+        Height = 141
+        Top = 265
+        Width = 179
+        Caption = 'GroupBox2'
+        ClientHeight = 122
+        ClientWidth = 175
+        TabOrder = 4
+        object Button7: TButton
+          Left = 24
+          Height = 25
+          Top = 32
+          Width = 75
+          Caption = 'Button7'
+          OnClick = Button7Click
+          TabOrder = 0
+        end
+      end
+      object GroupBox3: TGroupBox
+        Left = 248
+        Height = 137
+        Top = 265
+        Width = 209
+        Caption = 'GroupBox3'
+        ClientHeight = 118
+        ClientWidth = 205
+        TabOrder = 5
+        object Button8: TButton
+          Left = 40
+          Height = 25
+          Top = 32
+          Width = 75
+          Caption = 'Button8'
+          OnClick = Button8Click
+          TabOrder = 0
+        end
+      end
+    end
+  end
+end
