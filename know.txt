@@ -221,6 +221,16 @@ UI Show:
 calc:
     1. widLimit, heiLimit
         view size
+
+2016-09-01 四 08:58 上午
+1. two bitmap exchange used time 0.x ms, need application.ProcessMessages
+2. bitmap setsize spend large time, but big size change small cust little time
+    small change big cust large time
+3. gray image cause much time then rgb image
+
+change TDFDrawingPanel.pain
+    Self.OnMouseWheel := @TDFRoiImage(Self.Parent).OnMouseWheel;
+    TDFROIImage.OnMouseWheel
 ----------------------------------------------------------
 
 
