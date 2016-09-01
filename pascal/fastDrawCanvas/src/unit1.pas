@@ -9,7 +9,8 @@ uses
   //canvas info
   GraphType,
   //clock_time
-  linux, BaseUnix
+  linux, BaseUnix,
+  FPImage, IntfGraphics, LCLType
   ;
 
 type
@@ -35,10 +36,12 @@ type
     procedure Button2Click(Sender:TObject);
     procedure Button3Click(Sender:TObject);
     procedure Button4Click(Sender:TObject);
+    procedure Button5Click(Sender:TObject);
     procedure Button6Click(Sender:TObject);
     procedure Button7Click(Sender:TObject);
     procedure Button8Click(Sender:TObject);
     procedure FormCreate(Sender:TObject);
+    procedure Panel2Paint(Sender:TObject);
   private
     { private declarations }
   public
@@ -47,6 +50,7 @@ type
     bmpImgValue:Byte;
     imgSzChange:Integer;
     { public declarations }
+    procedure CreateLazIntfImg;
     procedure SetBitMapImg(aBmpTmp:TBitMap; imgValue:Byte);
   end;
 
@@ -72,6 +76,7 @@ begin
   SetBitMapImg(bmpColor, bmpImgValue);
 	//bmpColor.EndUpdate(False);
   Panel2.Canvas.Draw(0, 0, bmpColor);
+  //application.ProcessMessages;
   Clock_GetTime(CLOCK_REALTIME, @t2);
 	WriteLn('Button1Click BmpColor Used Time:' +
   	FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
@@ -131,6 +136,11 @@ begin
 
 end;
 
+procedure TForm1.Button5Click(Sender:TObject);
+begin
+  CreateLazIntfImg;
+end;
+
 procedure TForm1.Button6Click(Sender:TObject);
 var
   t1, t2 : timespec;
@@ -183,7 +193,7 @@ begin
   application.ProcessMessages;
   Sleep(1000);
   Clock_GetTime(CLOCK_REALTIME, @t2);
-	WriteLn('Button1Click BmpColor Used Time:' +
+	WriteLn('Button7Click BmpColor Used Time:' +
   	FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
 
   Clock_GetTime(CLOCK_REALTIME, @t1);
@@ -197,7 +207,7 @@ begin
   application.ProcessMessages;
   Sleep(1000);
   Clock_GetTime(CLOCK_REALTIME, @t2);
-	WriteLn('Button1Click bmpGray Used Time:' +
+	WriteLn('Button7Click bmpGray Used Time:' +
   	FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
 end;
 
@@ -235,12 +245,84 @@ begin
   imgSzChange := 0;
 end;
 
+procedure TForm1.Panel2Paint(Sender:TObject);
+var
+  t1, t2 : timespec;
+  aBmpTmp : TBitMap;
+begin
+ // Clock_GetTime(CLOCK_REALTIME, @t1);
+ // if bmpImgValue = Byte(200) then
+ // 	bmpImgValue := Byte(100)
+ // else
+ // 	bmpImgValue := Byte(200);
+ // aBmpTmp := bmpColor;
+ // aBmpTmp.Transparent := True;
+ // SetBitMapImg(aBmpTmp, bmpImgValue);
+ // Panel2.Canvas.Draw(0, 0, aBmpTmp);
+ // //application.ProcessMessages;
+ // Sleep(1000);
+ // Clock_GetTime(CLOCK_REALTIME, @t2);
+	//WriteLn('Paint BmpColor Used Time:' +
+ // 	FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
+
+ // Clock_GetTime(CLOCK_REALTIME, @t1);
+ // if bmpImgValue = Byte(200) then
+ // 	bmpImgValue := Byte(100)
+ // else
+ // 	bmpImgValue := Byte(200);
+ // aBmpTmp := bmpGray;
+ // SetBitMapImg(aBmpTmp, bmpImgValue);
+ // Panel2.Canvas.Draw(0, 0, aBmpTmp);
+ // application.ProcessMessages;
+ // Sleep(1000);
+ // Clock_GetTime(CLOCK_REALTIME, @t2);
+	//WriteLn('Paint bmpGray Used Time:' +
+ // 	FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
+end;
+
 procedure TForm1.SetBitMapImg(aBmpTmp:TBitMap; imgValue:Byte);
 var
   aRawImg:TRawImage;
 begin
   aRawImg := aBmpTmp.RawImage;
 	FillChar(aRawImg.Data^, aRawImg.DataSize, imgValue);
+end;
+
+procedure TForm1.CreateLazIntfImg;
+var
+  SrcIntfImg, TempIntfImg: TLazIntfImage;
+  ImgHandle,ImgMaskHandle: HBitmap;
+  FadeStep: Integer;
+  px, py: Integer;
+  CurColor: TFPColor;
+  TempBitmap: TBitmap;
+begin
+  SrcIntfImg:=TLazIntfImage.Create(0,0);
+  SrcIntfImg.LoadFromBitmap(bmpColor.Handle,bmpColor.MaskHandle);
+  TempIntfImg:=TLazIntfImage.Create(0,0);
+  TempIntfImg.LoadFromBitmap(bmpColor.Handle,bmpColor.MaskHandle);
+  TempBitmap:=TBitmap.Create;
+  for FadeStep:=1 to 32 do
+  begin
+    for py:=0 to SrcIntfImg.Height-1 do
+    begin
+      for px:=0 to SrcIntfImg.Width-1 do
+      begin
+        CurColor:=SrcIntfImg.Colors[px,py];
+        CurColor.Red:=(CurColor.Red*FadeStep) shr 5;
+        CurColor.Green:=(CurColor.Green*FadeStep) shr 5;
+        CurColor.Blue:=(CurColor.Blue*FadeStep) shr 5;
+        TempIntfImg.Colors[px,py]:=CurColor;
+      end;
+    end;
+    TempIntfImg.CreateBitmaps(ImgHandle,ImgMaskHandle,false);
+    TempBitmap.Handle:=ImgHandle;
+    TempBitmap.MaskHandle:=ImgMaskHandle;
+    Panel2.Canvas.Draw(0,0,TempBitmap);
+  end;
+  SrcIntfImg.Free;
+  TempIntfImg.Free;
+  TempBitmap.Free;
 end;
 
 end.
