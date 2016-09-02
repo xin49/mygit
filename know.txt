@@ -182,55 +182,8 @@ linux opencv cvLoadImage(filename, 1) load png fail:
 ----------------------------------------------------------
 
 -------------------------Daily----------------------------
-1. bug in algrithm in processimage not out
-2. mulit-roi bug:
-    DrawResult Start no End
-    test RGB mod
-3. bug in limit
-2016-08-19 五 08:33 上午
-1. 接口的设计：
-    接口应该不关注接口内部数据，接口主要目的是传递和检测
-    泛用型接口
-    接口选型
-
-2016-08-22 一 08:43 上午
-1. create opencv module project
-2. draw image with c
-
-2016-08-23 二 02:02 下午
-#define MY_CEILING(n, x)
-    (x%n+n-1)/n*n+x/n*n
-    (x%n+n-1+x)
-
-2016-08-24 三 08:53 上午
-2. canvas draw the gray image
-pImgData+col+((row>>3))
-2016-08-26 五 10:55 上午
-DF_dv_ColorModelConvertorPixelwise
-
-diff:0. set viewRC info
-1. copy viewRCBmp
-2. canvas.draw
-
-UI Show:
-   1. imgSrc info 
-   2. Scaled Size
-   3. panel size view size
-   4. start pointer view left
-
-calc:
-    1. widLimit, heiLimit
-        view size
-
-2016-09-01 四 08:58 上午
-1. two bitmap exchange used time 0.x ms, need application.ProcessMessages
-2. bitmap setsize spend large time, but big size change small cust little time
-    small change big cust large time
-3. gray image cause much time then rgb image
-
-change TDFDrawingPanel.pain
-    Self.OnMouseWheel := @TDFRoiImage(Self.Parent).OnMouseWheel;
-    TDFROIImage.OnMouseWheel
+1. dfdvifs bug
+    1.1 _Z34DF_dv_ColorModelConvertorPixelwiseP13_DF_TBufferIniPv 
+        src outof mem || dst outof mem
+        src outof limit
 ----------------------------------------------------------
-
-
