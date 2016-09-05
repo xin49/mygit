@@ -13,7 +13,9 @@ uses
   GraphType,
   //clock_time
   linux, BaseUnix,
-  FPImage, IntfGraphics, LCLType
+  FPImage, IntfGraphics, LCLType,
+  //TBGRABitMap
+  BGRABitmap, BGRABitmapTypes
   ;
 
 type
@@ -43,6 +45,7 @@ type
     Panel1:TPanel;
     Panel2:TPanel;
     Panel3:TPanel;
+    Timer1:TTimer;
     procedure Button1Click(Sender:TObject);
     procedure Button2Click(Sender:TObject);
     procedure Button3Click(Sender:TObject);
@@ -52,7 +55,7 @@ type
     procedure Button7Click(Sender:TObject);
     procedure Button8Click(Sender:TObject);
     procedure FormCreate(Sender:TObject);
-    procedure Panel2Paint(Sender:TObject);
+    procedure Timer1Timer(Sender:TObject);
   private
     { private declarations }
   public
@@ -64,16 +67,21 @@ type
     bmpColor1:TBitMap;
     bmpColor2:TBitMap;
     gBmpColorCur:TBitMap;
+    gBGRABmpTmp:TBGRABitmap;
     flashThread:TThread;
+    mainRefreshT : TRefreshThread;
     procedure CreateLazIntfImg;
     procedure SetBitMapImg(aBmpTmp:TBitMap; imgValue:Byte);
+    procedure SetUIOnEvent;
+    procedure PanelOnPaint(Sender: TObject);
   end;
 
   procedure LocalBmpToCanvas(aCanv:TCanvas);
   procedure GlobalBmpToCanvas(aCanv:TCanvas; aBmpTmp:TBitMap);
   procedure GlobalBmp2ExcToCanvas(aCanv:TCanvas;
       aBmpTmp1:TBitMap; aBmpTmp2:TBitMap; var aBmpTmpCur:TBitMap);
-  procedure FillTBmp(aBmpTmp:TBitMap; aImgVal:Byte);
+  procedure FillTBmp(aBmpTmp:TBitMap; aImgVal:Byte);inline;
+  procedure BGRA2Canvas(aBGRABmp:TBGRABitmap; aCvTmp:TCanvas);
 var
   Form1: TForm1;
   refreshThread : TRefreshThread;
@@ -154,15 +162,18 @@ end;
 
 procedure TForm1.Button4Click(Sender:TObject);
 begin
-
+	GlobalBmpToCanvas(Panel2.Canvas, bmpColor1);
 end;
 
 procedure TForm1.Button5Click(Sender:TObject);
 begin
-  if refreshThread.isStart then
-    refreshThread.Terminate
-  else
-    refreshThread.Start;
+	//Panel2.rePaint;
+  //mainRefreshT.Start;
+//  while True do
+//  begin
+    GlobalBmp2ExcToCanvas(Panel2.Canvas, bmpColor1, bmpColor2, gBmpColorCur);
+//    Sleep(1);
+//  end;
 end;
 
 procedure TForm1.Button6Click(Sender:TObject);
@@ -243,28 +254,19 @@ begin
   bmpColor2.PixelFormat := pfDevice;
   bmpColor2.SetSize(1025, 4000);
   gBmpColorCur := bmpColor1;
+  gBGRABmpTmp := TBGRABitMap.Create(1025, 4000);
 
+  mainRefreshT := TRefreshThread.Create(true);
   refreshThread := TRefreshThread.Create(true);
+
+  SetUIOnEvent;
+
+  //Timer1.Enabled := True;
 end;
 
-procedure TForm1.Panel2Paint(Sender:TObject);
-var
-  t1, t2 : timespec;
+procedure TForm1.Timer1Timer(Sender:TObject);
 begin
-  //Clock_GetTime(CLOCK_REALTIME, @t1);
-  //
-  //if gBmpColorCur = bmpColor1 then
-  //  gBmpColorCur := bmpColor2
-  //else
-  //  gBmpColorCur := bmpColor1;
-  //FillTBmp(gBmpColorCur, Random(256));
-  ////application.ProcessMessages; 
-  //Panel2.Canvas.Draw(0, 0, gBmpColorCur);
-  //application.ProcessMessages;
-  //
-  //Clock_GetTime(CLOCK_REALTIME, @t2);
-  //WriteLn('Panel2.Canvas Used Time:' + 
-  //    FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
+  Panel2.Refresh;
 end;
 
 procedure TForm1.SetBitMapImg(aBmpTmp:TBitMap; imgValue:Byte);
@@ -273,6 +275,16 @@ var
 begin
   aRawImg := aBmpTmp.RawImage;
 	FillChar(aRawImg.Data^, aRawImg.DataSize, imgValue);
+end;
+
+procedure TForm1.SetUIOnEvent;
+begin
+  //Panel2.OnPaint := @PanelOnPaint;
+end;
+
+procedure TForm1.PanelOnPaint(Sender: TObject);
+begin
+	GlobalBmp2ExcToCanvas(Panel2.Canvas, bmpColor1, bmpColor2, gBmpColorCur);
 end;
 
 procedure TForm1.CreateLazIntfImg;
@@ -314,11 +326,20 @@ end;
 
 { TRefreshThread }
 procedure TRefreshThread.Execute;
+var
+  t1, t2 : timespec;
 begin
   while not Terminated do
   begin  
+    Clock_GetTime(CLOCK_REALTIME, @t1);
+
+    Sleep(1);
     with Form1 do
-      Panel2.Canvas.Draw(0, 0, bmpColor1);
+    	GlobalBmp2ExcToCanvas(Panel2.Canvas, bmpColor1, bmpColor2, gBmpColorCur);
+
+    Clock_GetTime(CLOCK_REALTIME, @t2);
+	WriteLn('Execute Used Time:' +
+  	    FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
   end;
 end;
 
@@ -379,21 +400,33 @@ begin
   else
     aBmpTmpCur := aBmpTmp1;
   FillTBmp(aBmpTmpCur, Random(256));
-  //application.ProcessMessages; 
   aCanv.Draw(0, 0, aBmpTmpCur);
-  application.ProcessMessages;
 
   Clock_GetTime(CLOCK_REALTIME, @t2);
   WriteLn('GlobalBmp2ExcToCanvas Used Time:' +
     FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
 end;
 
-procedure FillTBmp(aBmpTmp:TBitMap; aImgVal:Byte);
+procedure FillTBmp(aBmpTmp:TBitMap; aImgVal:Byte);inline;
 var
   aRawImgTmp:TRawImage;
 begin
   aRawImgTmp := aBmpTmp.RawImage;
   FillChar(aRawImgTmp.Data^, aRawImgTmp.DataSize, aImgVal);
+end;
+
+procedure BGRA2Canvas(aBGRABmp:TBGRABitmap; aCvTmp:TCanvas);
+var
+  t1, t2 : timespec;
+begin
+  Clock_GetTime(CLOCK_REALTIME, @t1);
+
+  FillChar(aBGRABmp.Data^, 10086, Random(255));
+  aBGRABmp.InvalidateBitmap;
+
+  Clock_GetTime(CLOCK_REALTIME, @t2);
+  WriteLn('BGRA2Canvas Used Time:' +
+    FloatToStr((t2.tv_sec - t1.tv_sec)*1000 + (t2.tv_nsec - t1.tv_nsec) / 1000000));
 end;
 
 end.

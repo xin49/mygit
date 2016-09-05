@@ -58,7 +58,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir);/usr/share/fpcsrc/3.0.0/rtl/objpas/classes/"/>
-      <OtherUnitFiles Value="src"/>
+      <OtherUnitFiles Value="src;src/bgrabitmap9.1"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

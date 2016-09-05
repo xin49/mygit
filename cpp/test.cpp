@@ -50,14 +50,54 @@ int main()
     IplImage* pImgSrc = cvLoadImage("/root/图片/Taissa-Farmiga-29.jpg");
     cvSaveImage("pImgSrc.jpg", pImgSrc);
 */
+    //timespec time1, time2;
+    //int temp;
+    //clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
+    //for(int j = 0; j < 10; j++)
+    //    for (int i = 0; i< 242000000; i++)
+    //        temp+=temp;
+    //clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
+    //cout<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
+
+/*test add and mul used time */
     timespec time1, time2;
-    int temp;
+    int i, j, k;
+    i = 0;
+    j = 1;
+    k = 1;
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
-    for(int j = 0; j < 10; j++)
-        for (int i = 0; i< 242000000; i++)
-            temp+=temp;
+    while(i < 1000000000)
+    {
+        j += k;
+        i++;
+    }
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
-    cout<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
+    cout<<"Add Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
+
+    i = 0;
+    j = 1;
+    k = 1;
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
+    while(i < 1000000000)
+    {
+        j *= k;
+        i++;
+    }
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
+    cout<<"Mul Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
+
+    i = 0;
+    j = 1;
+    k = 1;
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
+    while(i < 1000000000)
+    {
+        j >> 15;
+        i++;
+    }
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
+    cout<<">> Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
+/* Add Used Times:2s90ms Mul Used Times:2s565ms */
 
     return 0;
 }

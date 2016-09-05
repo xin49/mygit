@@ -186,4 +186,31 @@ linux opencv cvLoadImage(filename, 1) load png fail:
     1.1 _Z34DF_dv_ColorModelConvertorPixelwiseP13_DF_TBufferIniPv 
         src outof mem || dst outof mem
         src outof limit
+
+2. Fast Direct Pixel Access
+    2.1 image to canvas
+        uses
+            BGRABitmap, BGRABitmapTypes;
+        not more fast
+    2,2 two image draw to canvas
+        draw but bitmap not update bitmap
+
+3. Multi-Thread change UI bug:
+    3.1 same class thread;
+        耗时短但是没有及时刷新
+        Execute Used Time:2.746217
+        GlobalBmp2ExcToCanvas Used Time:1.243341
+        Execute Used Time:2.323325
+        GlobalBmp2ExcToCanvas Used Time:1.723576
+    3.2 other class Thread;
+        refresh while bug Fatal IO error 11
+        refresh not in time
+        耗时短但是没有及时刷新
+        Execute Used Time:2.746217
+        GlobalBmp2ExcToCanvas Used Time:1.243341
+        Execute Used Time:2.323325
+        GlobalBmp2ExcToCanvas Used Time:1.723576
+    3.3 main Thread
+        refresh normal
+    3.4 add lock
 ----------------------------------------------------------
