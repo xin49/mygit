@@ -5,6 +5,16 @@ catching user input:
         read [options] NAME1 NAME2 ......NAMEN
 ----------------------------------------------------------
 
+----------------------gdb tips----------------------------
+command:
+    help
+    run
+    break file:row
+    step/next
+    print val || print/x val
+    watch
+----------------------------------------------------------
+
 ----------------------vim tips----------------------------
 restart:
     :so 

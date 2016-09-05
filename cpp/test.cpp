@@ -8,8 +8,8 @@
 #include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
-#include"opencv/cv.h"
-#include"opencv/highgui.h"
+//#include"opencv/cv.h"
+//#include"opencv/highgui.h"
 
 using namespace std;
 
