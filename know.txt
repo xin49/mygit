@@ -5,6 +5,14 @@ catching user input:
         read [options] NAME1 NAME2 ......NAMEN
 ----------------------------------------------------------
 
+----------------------lazarus tips------------------------
+1. TTimer:
+    is TTimer still add Interval when Execute?
+        test result: TTimer still add clock
+2. 当定时器刷新界面时弹出界面挂掉
+    还是没有解决
+----------------------------------------------------------
+
 ----------------------gdb tips----------------------------
 command:
     help
