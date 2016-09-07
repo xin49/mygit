@@ -47,6 +47,10 @@ auto refresh:
 
 vim gcc link opencv:
 		exec "!g++ -fPIC -L/DF_Vision_SDK/linuxbin % -o %<  -lopencv_imgproc -lopencv_calib3d -lopencv_contrib -lopencv_core -lopencv_features2d -lopencv_flann -lopencv_gpu -lopencv_highgui -lopencv_legacy -lopencv_ml -lopencv_nonfree -lopencv_objdetect -lopencv_ocl -lopencv_photo -lopencv_stitching -lopencv_superres -lopencv_ts -lopencv_video -lopencv_videostab"
+
+set marks:
+    command without ":" that m+mark symbol; example: ma, mb, mc;
+    and use ` to switch to marks: `+ mark symbol; `a,`b, `c;
 ----------------------------------------------------------
 
 ----------------------programs----------------------------
@@ -99,9 +103,11 @@ gtk2 show image can you transf, offset, mirror, and roi:
         Width, 
         Height
 
-Geometric Image Transformations:
-    Rotation, Scale, Offset, Mirror
-    Rotation:
+Geometric Transformation:
+    Geometric tranformation:
+        is any "bijection" of a "set" having some geometric structure
+        to itself or another such set.
+
 
 why gtk and else GUI not supported gray image
     1. gtk 24bit image is 4 channel
@@ -231,4 +237,24 @@ linux opencv cvLoadImage(filename, 1) load png fail:
     3.3 main Thread
         refresh normal
     3.4 add lock
+2016-09-07 三 01:12 下午
+1. DFvision FullSpeedRun cann't change system "Top Window"
+    But now not exist(maybe)
+2. Optimization DrawRegionToHDC
+    DrawRegionToHDC Copy 
+    1. 由于像素内存不连续，不采用块和片的内存操作，直接操作像素;
+    2. 功能只需要对图像进行缩放
+    3. 边界判断：
+        1. image source limit
+        5. image source show limit
+        2. scalex, scaley
+        3. panel show star position
+        4. panel size
+----------------------------------------------------------
+
+----------------------weekly work--------------------------
+1. change MainThread TTimer refresh show panel(canvas);
+2. test run FullSpeedRunThread show time used;
+3. change the DrawRegionToHDC code struct;
+4. test cross-platform(ubuntu && windows)
 ----------------------------------------------------------
