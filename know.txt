@@ -133,6 +133,9 @@ why gtk and else GUI not supported gray image
         colorTime:185.500574
         allTime:189.792568
         ///////////////////////////////////////////////
+
+inline:
+    inline function not spent less time obvious
 ----------------------------------------------------------
 
 ----------------------script------------------------------
@@ -193,6 +196,12 @@ change application search and ico:
     cp appname.desktop tp ~/.local/share/applications/
     mv ico image to ~/.local/share/icons/hicolor/
     but on left languch still no change
+
+image process tools:
+    1. ImageMagick(convert)
+    1.1 change image format: example: *.jpeg *.bmp
+    1.2 convert to gray image: 
+        convert -type Grayscale "src.image" "dst.image"
 ----------------------------------------------------------
 
 ----------------------opencv------------------------------
@@ -206,50 +215,11 @@ linux opencv cvLoadImage(filename, 1) load png fail:
 ----------------------------------------------------------
 
 -------------------------Daily----------------------------
-1. dfdvifs bug
-    1.1 _Z34DF_dv_ColorModelConvertorPixelwiseP13_DF_TBufferIniPv 
-        src outof mem || dst outof mem
-        src outof limit
-
-2. Fast Direct Pixel Access
-    2.1 image to canvas
-        uses
-            BGRABitmap, BGRABitmapTypes;
-        not more fast
-    2,2 two image draw to canvas
-        draw but bitmap not update bitmap
-
-3. Multi-Thread change UI bug:
-    3.1 same class thread;
-        耗时短但是没有及时刷新
-        Execute Used Time:2.746217
-        GlobalBmp2ExcToCanvas Used Time:1.243341
-        Execute Used Time:2.323325
-        GlobalBmp2ExcToCanvas Used Time:1.723576
-    3.2 other class Thread;
-        refresh while bug Fatal IO error 11
-        refresh not in time
-        耗时短但是没有及时刷新
-        Execute Used Time:2.746217
-        GlobalBmp2ExcToCanvas Used Time:1.243341
-        Execute Used Time:2.323325
-        GlobalBmp2ExcToCanvas Used Time:1.723576
-    3.3 main Thread
-        refresh normal
-    3.4 add lock
-2016-09-07 三 01:12 下午
-1. DFvision FullSpeedRun cann't change system "Top Window"
-    But now not exist(maybe)
-2. Optimization DrawRegionToHDC
-    DrawRegionToHDC Copy 
-    1. 由于像素内存不连续，不采用块和片的内存操作，直接操作像素;
-    2. 功能只需要对图像进行缩放
-    3. 边界判断：
-        1. image source limit
-        5. image source show limit
-        2. scalex, scaley
-        3. panel show star position
-        4. panel size
+constructure procedure abstract
+    什么是抽象？
+    组合总结和构造， 对比， 总结？
+    apt install mit-scheme
+    configure vim for sicp
 ----------------------------------------------------------
 
 ----------------------weekly work--------------------------

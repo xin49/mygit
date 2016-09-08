@@ -26,6 +26,22 @@ temp.tv_nsec = end.tv_nsec-start.tv_nsec;
 return temp;
 }
 
+int sum(int a, int b){
+    return (a+b);
+}
+
+inline int inlineSum(int a, int b){
+    return (a+b);
+}
+
+int calc1(int a, int b, int c, int d){
+    return ((a + b) * c) >> d;
+}
+
+int inlineCalc1(int a, int b, int c, int d){
+    return ((a + b) * c) >> d;
+}
+
 int main()
 {
 /* test malloc, Pointer, free
@@ -60,6 +76,7 @@ int main()
     //cout<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
 
 /*test add and mul used time */
+/*
     timespec time1, time2;
     int i, j, k;
     i = 0;
@@ -96,8 +113,37 @@ int main()
         i++;
     }
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
-    cout<<">> Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
+    cout<<">> Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;*/
 /* Add Used Times:2s90ms Mul Used Times:2s565ms */
+
+/* test inline func spend time */
+
+    timespec time1, time2;
+    int i, j, k;
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
+    while(i < 1000000000)
+    {
+        k = calc1(1, 2, 3, 4);
+        i++;
+    }
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
+    cout<<"sum Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
+
+    i = 0;
+    j = 1;
+    k = 1;
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);
+    while(i < 1000000000)
+    {
+        k = inlineCalc1(1, 2, 3, 4);
+        i++;
+    }
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
+    cout<<"inlineSum Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
+/* inline function not spent less time obvious */
+//sum Used Times:3s741ms
+//inlineSum Used Times:3s403ms
+/* */
 
     return 0;
 }
@@ -109,3 +155,6 @@ int main()
 //Test clock_gettime
 
 //test opencv
+
+/* Add Used Times:2s90ms Mul Used Times:2s565ms, 
+ * << and >> spent less time */
