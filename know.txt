@@ -220,6 +220,15 @@ constructure procedure abstract
     组合总结和构造， 对比， 总结？
     apt install mit-scheme
     configure vim for sicp
+install MIT-Scheme
+configure vim for sicp
+    In a nutshell, I’m going to describe where to get SICP, which Scheme interpreter to use, and how to send snippets of code from Vim to a REPL running in a different tmux pane using tslime. For what it’s worth, I’m using OS X 10.9.4, but I think things should work equally well on Linux. Windows folks, good luck!
+    1. SICP
+    2. scheme: Racket racket -i -p neil/sicp -l xrepl
+    3. vim
+    4. tslime
+    5. tmux
+    6. REPL
 ----------------------------------------------------------
 
 ----------------------weekly work--------------------------
