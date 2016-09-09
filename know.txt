@@ -229,6 +229,10 @@ configure vim for sicp
     4. tslime
     5. tmux
     6. REPL
+    note:http://crash.net.nz/
+    follow and read all tools
+
+SICP
 ----------------------------------------------------------
 
 ----------------------weekly work--------------------------
