@@ -136,6 +136,10 @@ why gtk and else GUI not supported gray image
 
 inline:
     inline function not spent less time obvious
+
+tools:
+    tmux:
+        1. close current pane:<C-a> + !
 ----------------------------------------------------------
 
 ----------------------script------------------------------
