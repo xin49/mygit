@@ -13,6 +13,10 @@ catching user input:
     还是没有解决
 ----------------------------------------------------------
 
+----------------------makefile tips-----------------------
+
+----------------------------------------------------------
+
 ----------------------gdb tips----------------------------
 command:
     help
@@ -281,8 +285,4 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "mai
 ----------------------------------------------------------
 
 ----------------------weekly work--------------------------
-1. change MainThread TTimer refresh show panel(canvas);
-2. test run FullSpeedRunThread show time used;
-3. change the DrawRegionToHDC code struct;
-4. test cross-platform(ubuntu && windows)
 ----------------------------------------------------------
