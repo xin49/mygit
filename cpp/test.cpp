@@ -8,6 +8,7 @@
 #include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
+#include <dlfcn.h>
 //#include"opencv/cv.h"
 //#include"opencv/highgui.h"
 
@@ -116,7 +117,7 @@ int main()
     cout<<">> Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;*/
 /* Add Used Times:2s90ms Mul Used Times:2s565ms */
 
-/* test inline func spend time */
+/* test inline func spend time 
 
     timespec time1, time2;
     int i, j, k;
@@ -140,11 +141,12 @@ int main()
     }
     clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
     cout<<"inlineSum Used Times:"<<diff(time1,time2).tv_sec<<"s"<<diff(time1,time2).tv_nsec/1000000<<"ms"<<endl;
-/* inline function not spent less time obvious */
+ inline function not spent less time obvious */
 //sum Used Times:3s741ms
 //inlineSum Used Times:3s403ms
 /* */
-
+    dlopen("1.so", 0);
+    printf("df");
     return 0;
 }
 //note

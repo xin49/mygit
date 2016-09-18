@@ -235,8 +235,49 @@ configure vim for sicp
     6. REPL
     note:http://crash.net.nz/
     follow and read all tools
-
 SICP
+2016-09-18 日 08:38 上午
+1. c++ load dynamic library
+2. view the df-console code
+2016-09-18 日 08:46 上午
+1. 未定义引用：
+    dlopen: 引用头文件但是没有静态载入静态库
+    use -ldl include libdl.so shared library
+gcc command:
+    gcc + -fPIC -L/library/path/.. source-files -o output-files -lxx -lxx2 -llibraries
+    gcc编译时对"xxxx"未定义的引用问题：
+    gcc现将源码编译为.o文件，没有语法错误，然后进行链接出现未定义引用问题。
+    dso.cpp:(.text+0x3c)：对‘dlopen’未定义的引用
+    dso.cpp:(.text+0x4c)：对‘dlsym’未定义的引用
+    dso.cpp:(.text+0xb5)：对‘dlerror’未定义的引用
+    dso.cpp:(.text+0x13e)：对‘dlclose’未定义的引用
+
+    出现这种情况的原因，主要是C/C++
+    编译为obj文件的时候并不需要函数的具体实现，只要有函数的原型即可。
+    但是在链接为可执行文件的时候就必须要具体的实现了。
+    如果错误是未声明的引用，那就是找不到函数的原型，解决办法这里就不细致说了，
+    通常是相关的头文件未包含
+
+    指定原因就好办了，既然知道是缺少了函数的具体实现，
+    那么就给它这个函数的实现就好了。
+    比如上面的例子，是因为缺失了dlopen、dlsym、dlerror、dlclose这些函数的实现，
+    这几个函数是用于加载动态链接库的，编译的时候需要添加-ldl来使用dl库
+    (这是静态库，在系统目录下/usr/lib/i386-linux-gnu/libdl.a、
+    /usr/lib/x86_64-linux-gnu/libdl.a)。
+    但是看上面编译的时候是有添加-ldl选项的，那么为什么不行呢？
+
+    这个主要的原因是gcc编译的时候，各个文件依赖顺序的问题。
+    在gcc编译的时候，如果文件a依赖于文件b，那么编译的时候必须把a放前面，b放后面。
+    例如:在main.c中使用了pthread库相关函数，那么编译的时候必须是main.c在前，-lpthread在后。gcc main.c -lpthread -o a.out。
+    上面出现问题的原因就是引入库的顺序在前面了，将其放置在后面即可了。
+    g++ -o spider  bloomfilter.o confparser.o crc32.o dso.o hashs.o md5.o qstring.o sha1.o socket.o spider.o threads.o url.o    -rdynamic -lpthread -levent -lcrypt -ldl
+
+2. eclipse gcc command:
+    df-console:
+g++ -L"../../../DFVisionConsole_Common/x86-linux/lib" -o "../../../DFVisionConsole/x86-linux/bin/DFVisionConsole"  ./src_main/main.o  ./df_util.o ./df_util_sys.o ./dfconsole_global_definition.o ./dfconsole_main.o   -lopencv_imgproc -lopencv_calib3d -lopencv_contrib -lopencv_core -lopencv_features2d -lopencv_flann -lopencv_gpu -lopencv_highgui -lopencv_legacy -lopencv_ml -lopencv_nonfree -lopencv_objdetect -lopencv_ocl -lopencv_photo -lopencv_stitching -lopencv_superres -lopencv_ts -lopencv_video -lopencv_videostab -ldl
+Finished building target: ../../../DFVisionConsole/x86-linux/bin/DFVisionConsole
+    test:
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
 ----------------------------------------------------------
 
 ----------------------weekly work--------------------------
