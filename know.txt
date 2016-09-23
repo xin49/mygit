@@ -282,6 +282,10 @@ g++ -L"../../../DFVisionConsole_Common/x86-linux/lib" -o "../../../DFVisionConso
 Finished building target: ../../../DFVisionConsole/x86-linux/bin/DFVisionConsole
     test:
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.d" -o "main.o" "../main.cpp"
+2016-09-19 一 10:13 上午
+1. package libxml to operator xml
+2016-09-21 三 10:01 上午
+解决黄金模板比对bug
 ----------------------------------------------------------
 
 ----------------------weekly work--------------------------
