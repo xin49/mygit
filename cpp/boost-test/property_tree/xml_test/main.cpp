@@ -17,12 +17,14 @@ using namespace boost::property_tree;
 
 int main(void)  
 {  
+	test();
+	return 1;
     char szXmlFile[] = "/root/test/xml/test.xml";
-    void* tmp = XmlDocumentReadFromFile(szXmlFile);
-    string strTmp;  
-  
-    ptree pt;  
-    xml_parser::read_xml(szXmlFile, pt);  
+    void* tmp = XmlHelperReadFromFile(szXmlFile);
+    string strTmp;
+
+    ptree pt;
+    xml_parser::read_xml(szXmlFile, pt);
   
     ptree doc;
     ptree &root = doc.add_child("root", ptree());
@@ -32,30 +34,30 @@ int main(void)
 //    boost::property_tree::xml_writer_settings<char> settings('\t', 1);
     write_xml("/root/test/xml/test_save.xml", doc);
 
-    void* pDoc = XmlDocumentCreateNode();
-    void* pRoot = XmlDocumentSetNode(pDoc, "root");
-    XmlDocumentSetNodeValue(pRoot, "node1", "content1");
-    void* pNode2 = XmlDocumentSetNode(pRoot, "node2");
-    XmlDocumentSetNodeValue(pNode2, "node3", "content2");
-    void* pNodeDef = XmlDocumentCreateNode();
+    void* pDoc = XmlHelperCreateNode();
+    void* pRoot = XmlHelperSetNode(pDoc, "root");
+    XmlHelperSetNodeValue(pRoot, "node1", "content1");
+    void* pNode2 = XmlHelperSetNode(pRoot, "node2");
+    XmlHelperSetNodeValue(pNode2, "node3", "content2");
+    void* pNodeDef = XmlHelperCreateNode();
 
-    void* pNodeTmp = XmlDocumentGetNode(pDoc, "root");
-    XmlDocumentSetNodeAttributeValue(pNodeTmp, "rootAttrVal");
-    pNodeTmp = XmlDocumentGetNode(pNodeTmp, "node1", pNodeDef);
-	XmlDocumentSetNodeAttributeValue(pNodeTmp, "node1AttrVal");
-	pNodeTmp = XmlDocumentGetNode(pRoot, "node2", pNodeDef);
-	XmlDocumentSetNodeAttributeValue(pNodeTmp, "node2AttrVal");
-    pNodeTmp = XmlDocumentGetNode(pRoot, "node1", pNodeDef);
+    void* pNodeTmp = XmlHelperGetNode(pDoc, "root");
+    XmlHelperSetNodeAttributeValue(pNodeTmp, "rootAttrVal");
+    pNodeTmp = XmlHelperGetNode(pNodeTmp, "node1");
+	XmlHelperSetNodeAttributeValue(pNodeTmp, "node1AttrVal");
+	pNodeTmp = XmlHelperGetNode(pRoot, "node2");
+	XmlHelperSetNodeAttributeValue(pNodeTmp, "node2AttrVal");
+    pNodeTmp = XmlHelperGetNode(pRoot, "node1");
 
-    cout << XmlDocumentGetNodeAttrValue(pRoot) << endl;
-    cout << XmlDocumentGetNodeAttrValue(pNode2) << endl;
-    cout << XmlDocumentGetNodeAttrValue(pNodeTmp) << endl;
+    cout << XmlHelperGetNodeAttr(pRoot) << endl;
+    cout << XmlHelperGetNodeAttr(pNode2) << endl;
+    cout << XmlHelperGetNodeAttr(pNodeTmp) << endl;
 
-    cout << XmlDocumentGetNodeName(pRoot) << endl;
-    cout << XmlDocumentGetNodeName(pNodeTmp) << endl;
-    cout << XmlDocumentGetNodeName(pNode2) << endl;
+    cout << XmlHelperGetNodeName(pRoot) << endl;
+    cout << XmlHelperGetNodeName(pNodeTmp) << endl;
+    cout << XmlHelperGetNodeName(pNode2) << endl;
 
-    XmlDocumentWriteToFile(pDoc, "/root/test/xml/pDoc_save.xml");
+    XmlHelperWriteToFile(pDoc, "/root/test/xml/pDoc_save.xml");
 
 
 	test();
@@ -114,3 +116,25 @@ int main(void)
 
     return 0;  
 }  
+
+typedef vector<string> TStringVector;
+TStringVector GetDFVisionMainInfo(const char* fileName)
+{
+    void* pDoc = XmlHelperReadFromFile(fileName);
+    void* pRoot = XmlHelperGetNode(pDoc, "DFDgAll");
+    TStringVector strVecTmp;
+    strVecTmp.push_back(XmlHelperGetNodeAttrValue(pRoot, "BaseImage"));
+    strVecTmp.push_back(XmlHelperGetNodeAttrValue(pRoot, "BtnCount"));
+    strVecTmp.push_back(XmlHelperGetNodeAttrValue(pRoot, "LoadFileList"));
+    XmlHelperFree(pDoc);
+    return strVecTmp;
+}
+
+void* GetPluginParamNode(const char* fileName)
+{
+    void* pDoc = XmlHelperReadFromFile(fileName);
+    void* pRoot = XmlHelperGetNode(pDoc, "DFDgAll");
+    void* pPlgNode = XmlHelperGetNode(pRoot, "Plugin");
+    XmlHelperFree(pDoc);
+    return pPlgNode;
+}
