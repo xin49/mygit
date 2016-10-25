@@ -120,7 +120,7 @@ int main(void)
 typedef vector<string> TStringVector;
 TStringVector GetDFVisionMainInfo(const char* fileName)
 {
-    void* pDoc = XmlHelperReadFromFile(fileName);
+    void* pDoc = XmlHelperReadFromFile((char*)fileName);
     void* pRoot = XmlHelperGetNode(pDoc, "DFDgAll");
     TStringVector strVecTmp;
     strVecTmp.push_back(XmlHelperGetNodeAttrValue(pRoot, "BaseImage"));
@@ -132,7 +132,7 @@ TStringVector GetDFVisionMainInfo(const char* fileName)
 
 void* GetPluginParamNode(const char* fileName)
 {
-    void* pDoc = XmlHelperReadFromFile(fileName);
+    void* pDoc = XmlHelperReadFromFile((char*)fileName);
     void* pRoot = XmlHelperGetNode(pDoc, "DFDgAll");
     void* pPlgNode = XmlHelperGetNode(pRoot, "Plugin");
     XmlHelperFree(pDoc);

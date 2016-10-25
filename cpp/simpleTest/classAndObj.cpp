@@ -88,6 +88,18 @@ TMyDuck::~TMyDuck()
 {
 }
 
+//this point this just like self in pascal
+
+/*
+ * Pointer to c++ classes
+ *    pointer to class just like pointer to structure
+ *    class just like structure + function
+ */
+
+/* static member
+ *     all object share same class member;
+ *     can initial at first
+ */
 int main()
 {
     PMyDuck pYaYa = new TMyDuck;
