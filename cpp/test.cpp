@@ -43,8 +43,24 @@ int inlineCalc1(int a, int b, int c, int d){
     return ((a + b) * c) >> d;
 }
 
+template <class Type>
+struct TMyStruct{
+    int count;
+    Type* pItem;
+};
+
 int main()
 {
+    int intArr[3][2] = {{1, 2}, {3, 4}, {5, 6}};
+    TMyStruct<int[2]> myArr;
+    myArr.count = 3;
+    myArr.pItem = intArr;
+    std::cout << intArr[0][0] << std::endl;
+    std::cout << intArr[1][0] << std::endl;
+    std::cout << intArr[2][0] << std::endl;
+    std::cout << myArr.pItem[0] << std::endl;
+    std::cout << myArr.pItem[1] << std::endl;
+    std::cout << myArr.pItem[2] << std::endl;
 /* test malloc, Pointer, free
     printf("sizeof(int)%d\n", sizeof(int));
     int *pIntTmp = (int*)malloc(2 * sizeof(int));
@@ -145,8 +161,6 @@ int main()
 //sum Used Times:3s741ms
 //inlineSum Used Times:3s403ms
 /* */
-    dlopen("1.so", 0);
-    printf("df");
     return 0;
 }
 //note
