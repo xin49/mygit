@@ -1,6 +1,7 @@
 import os
 import datetime
 import shutil
+import sys
 
 # get current time folder name
 folder_name=str(datetime.datetime.now())[:16]
@@ -32,11 +33,27 @@ def RecursionDirection(curDir, filter_suffix_lst, files, dirs):
             dirs.append(name)
             RecursionDirection(name, filter_suffix_lst, files, dirs)
 
+def ResursionCopyDirFiles(srcDir, dstDir, filter_suffix_lst, files, dirs):
+    ls_name=os.listdir(srcDir)
+    for name in ls_name:
+        if os.path.isfile(os.path.join(srcDir, name)):
+            if filter_files(name, filter_suffix_lst):
+                shutil.copy(os.path.join(srcDir, name), dstDir)
+        else:
+            nameDst = dstDir + "/" + name
+            os.makedirs(nameDst, 0o777, True)
+            name=os.path.join(srcDir, name)
+            ResursionCopyDirFiles(name, nameDst, filter_suffix_lst, files, dirs)
+
+# 1. set src directory to current directory
+
 if __name__ == '__main__':
     files=[]
     dirs=[]
     filter_suffix_lst=["*.c", "*.h", "*.cpp", "*.cpp", "*.pas", "*.lpr", "*.sh", "*.py"]
     filter_suffix_lst=Get_suffix_lst(filter_suffix_lst)
-    RecursionDirection("../../", filter_suffix_lst, files, dirs)
-    print(files)
-    print(dirs)
+    cur_dir=os.getcwd()
+    dst_dir=cur_dir+"_backup/"+str(datetime.datetime.now())[:16]
+    # os.makedirs(dst_dir, 0o777, True)
+    os.makedirs(dst_dir, 0o777, True)
+    ResursionCopyDirFiles(cur_dir, dst_dir, filter_suffix_lst, files, dirs)
