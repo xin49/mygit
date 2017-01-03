@@ -1,0 +1,58 @@
+1. center data 
+    data struct: list
+    helper data: THelper....
+    TRange{
+        float begin;
+        float end;
+    }
+    TTypeTime{
+        int type;
+        TRange range;
+        string detail;
+    }
+    TTypeTimeList TTypeTime[]
+    base data: TEmployee
+    TEmployee{
+        string name;
+        int id;
+        TTypeTimeList unCheckTimes;
+        TTypeTimeList safeTimes;
+    }
+
+2. helper function
+    1. excel apis
+    2. xml apis
+    3. center data read/write/print
+    4. center data analysis
+
+-------------1. center data--------------
+enmu:
+    TTypeTimeUndefine=0
+
+class TRange:
+    begin=0.0
+    end=0.0
+    def __init__(self, begin, end):
+        self.begin=begin
+        self.end=end
+class TTypeTime:
+    typeId=0
+    range=TRange(0.0, 0.0)
+    detail=''
+    def __init__(self, typeId, range, detail)
+        self.typeId=typeId
+        self.range=range
+        self.detail=detail
+    def __init__(self, typeId, range)
+        self.typeId=typeId
+        self.range=range
+class TEmployee:
+    name=""
+    id=0
+    unCheckTimes=[]
+    safeTimes=[]
+    def __init__(self, name, id)
+        self.name=name
+        self.id=id
+
+------------2. helper function----------
