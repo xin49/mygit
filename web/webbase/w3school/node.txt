@@ -1,0 +1,74 @@
+1. what is WWW
+什么是www?
+    www: world wide web; web; 万维网;
+    web由遍布全球的计算机组成;
+    web中的计算机互相通信;
+    web基于http protocol通信;
+
+www是怎么工作的?
+    web information in web page document;
+    web page document saved in server;
+    our use client(pc) get information from server;
+    client < tools browser> server
+    tools: Internet Explorer, Chrome, Mozilla Firefox
+
+浏览器如何读取页面?
+    browser send a require to server and get web page;
+    web page saved in server?
+    client < browser > server struct: c/s struct or b/s struct
+    require e.g: http/https://www.someone.com/page.htm
+
+how browser show web page?
+    browser read the html files get HTML table
+        content e.g: <p> This is a Paragraph </p>
+
+who define web standard protocol?
+    not Netscape, not Microsoft;
+    Is W3C(world wide web consortium);
+    the base Standard: HTML, CSS, XML;
+    now HTML 1.0;
+
+2. HTML
+e.g:
+    <html>
+        <body>
+            <h1> My First Heading </h1>
+            <p> My First paragraph. </p>
+        </body>
+    </html>
+
+what is HTML?
+    HTML: Hyper Text Markup Language;    
+    HTML isn't program language but markup language;
+    markup language is group of markup tag;
+    HTML describ web page;
+
+html tag?
+    html tag is tag in html file, and it has his format;
+    e.g:
+        couple <> with keyword inside ----> <html> </html>;
+
+html document = web page
+    html document describ web page;
+    html include html tag and text content;
+    html document = web page;
+
+e.g extend:
+    <html> text describ web page </html>
+    <body> web page visiable part </body>
+    <h1> title </h1>
+    <p> paragraph </p>
+
+3. CSS
+    css: cascading style sheets;
+    define how to show html element;
+    content and show divide so html and css;
+    css main define 4 part:
+        browser define setting;
+        exter style;
+        inter style; 
+        union style;
+
+4. HTML learning
+    1. build a web UI
+

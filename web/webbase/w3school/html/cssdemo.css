@@ -1,0 +1,27 @@
+body {
+    background-color:#00A000;
+}
+
+h1 {
+    color:#100000;
+    align:center;
+    font-family:fantasy;
+}
+
+h2 {
+    color:#700000;
+    align:center;
+    font-family:fantasy;
+}
+
+h3 {
+    color:#a00000;
+    align:center;
+    font-family:fantasy;
+}
+
+h4 {
+    color:#f00000;
+    align:center;
+    font-family:fantasy;
+}
