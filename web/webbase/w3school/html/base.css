@@ -1,0 +1,32 @@
+title {
+    font-family:comic sans ms;
+}
+
+a {
+    font-family:comic sans ms;
+}
+
+a:link {
+    color:green;
+    background-color:transparent;
+}
+
+a:visited {
+    color:pink;
+    background-color:transparent;
+}
+
+a:hover {
+    color:red;
+    background-color:transparent;
+}
+
+a:active {
+    color:yellow;
+    background-color:transparent;
+}
+
+p:hover{
+    color:red;
+    background-color:transparent;
+}
