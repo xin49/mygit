@@ -68,6 +68,7 @@ use css:
     what is links: links are sites allow we click their way from
         page to page.
     link syntax: <a herf="url"> link text </a>
+    need in <a> tag
     tips:
         we can set link state:
             1 base color
@@ -78,3 +79,27 @@ use css:
             1 set link open way:target="_blank"/_top open in new 
             tag
             2 set link as a bookmark herf="#id"
+
+2017年04月20日 星期四 22时57分35秒
+1. review linksdemo1
+    write a easy link page link to stoya
+            title
+            img1 link to website1
+        menu
+            t1
+            t2
+            t3
+        title1
+            p1
+        title2
+            p2
+        title3
+            p3
+
+2 html image
+    imagedemo.html
+    base.css
+    tag name: img
+    <img src="pic_mountain.jpg" alt="Mountain View" style="width
+    :304px;height:228px;">
+        what is the alt? src url broken show the text content
