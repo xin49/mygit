@@ -1,0 +1,7 @@
+1 g++ paramenter flow is right -> left
+2 g++ link libs have depend on other libs
+3 g++ right libs depend on left libs
+4 g++ link static libs with -l too
+5 ldd search .so get link relation
+6 nm search .a/.so get source
+7 grep/vim search .a/.so get source

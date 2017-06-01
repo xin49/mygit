@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title> loadimage </title>
+        <link rel="icon" href="/home/ouo/code/test/images/human/ebbi/face.jpg"/>
+        <link rel="stylesheet" href="./base.css"/>
+        <h1> Load Image Demo</h1>
+        <div/>
+        <div/>
+    </head>
+    <body>
+        <p id="imgTitle" style="align-content:center"></p>
+        <img id="imgShow" src="" align="middle" style="width:100px"/>
+        <div/>
+        <button type="button" onclick="LoadImage("/home/ouo/code/test/images/human/ebbi/face.jpg")"> load image </button>
+    <script>
+        function LoadImage(argFileName){
+            document.getElementById("imgTitle").innerHTML="1245";
+            document.getElementById("imgShow").src=argFileName;
+        }
+    </script>
+    </body>
+</html>

@@ -103,3 +103,14 @@ use css:
     <img src="pic_mountain.jpg" alt="Mountain View" style="width
     :304px;height:228px;">
         what is the alt? src url broken show the text content
+    property:
+        autosize:
+
+2017年04月25日 星期二 22时48分09秒
+1. we not need to leaning more detail about html compoment,
+    such as images, tables, lists, blocks, classes(id), 
+    iframes and so on, you can leaning it when you use that.
+
+2. you can learning javascript to get more dynamic and inter-
+    active
+    jsdemo.html
