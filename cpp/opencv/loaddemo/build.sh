@@ -87,4 +87,4 @@ OpencvLibs="\
  -llibtiff \
  -lpthread \
 "
-$Cli $ExtPr ./loaddemo.cpp -I$OpencvInclude -L$OpencvLibPath $OpencvLibs -fPIC -o$OutputName
+$Cli $ExtPr ./loaddemo.cpp -I$OpencvInclude -L$OpencvLibPath $OpencvLibs -lglib-2.0 -fPIC -o$OutputName
