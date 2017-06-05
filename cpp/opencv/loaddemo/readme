@@ -5,3 +5,8 @@
 5 ldd search .so get link relation
 6 nm search .a/.so get source
 7 grep/vim search .a/.so get source
+8 opencv highgui depend on
+    -lpthread \
+    -lgobject-2.0 \
+    -lgtk-x11-2.0 \
+    -lgdk-x11-2.0 \

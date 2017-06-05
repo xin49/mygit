@@ -11,6 +11,7 @@ OpencvInclude=$OpencvPath/include
 OpencvLibPath=$OpencvPath/lib
 OpencvLibs="\
  -lopencv_highgui \
+ -lopencv_imgproc \
  -lopencv_highgui_pch_dephelp \
  -lopencv_core \
  -lopencv_core_pch_dephelp \
@@ -25,7 +26,6 @@ OpencvLibs="\
  -lopencv_gpu \
  -lopencv_gpu_pch_dephelp \
  -lopencv_haartraining_engine \
- -lopencv_imgproc \
  -lopencv_imgproc_pch_dephelp \
  -lopencv_legacy \
  -lopencv_legacy_pch_dephelp \
@@ -86,5 +86,8 @@ OpencvLibs="\
  -llibpng \
  -llibtiff \
  -lpthread \
+ -lgobject-2.0 \
+ -lgtk-x11-2.0 \
+ -lgdk-x11-2.0 \
 "
 $Cli $ExtPr ./loaddemo.cpp -I$OpencvInclude -L$OpencvLibPath $OpencvLibs -lglib-2.0 -fPIC -o$OutputName
