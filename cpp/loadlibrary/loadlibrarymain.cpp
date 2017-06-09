@@ -2,19 +2,49 @@
 	> File Name: loadlibrarymain.cpp
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
+#include <string>
+#ifdef WIN32
+#include <Windows.h>
+#else
 #include <dlfcn.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#include <unistd.h>
+#endif
 
 using namespace std;
 
+void* LoadLib(const char* argFileName)
+{
+	#ifdef WIN32
+	return LoadLibrary(argFileName);
+	#else
+	return dlopen(argFileName, RTLD_LAZY);
+	#endif
+}
+
+void FreeLib(void** pHLib)
+{
+	#ifdef WIN32
+	FreeLibrary((HMODULE)*pHLib);
+	#else
+	if(*pHLib != NULL)
+	dlclose(*pHLib);
+	#endif
+	*pHLib = NULL;
+}
+
 int main()
 {
-    void *handle;
-    char* libName = "/home/ouo/code/dfvisionsrc/svn/DF_Vision_SDK/linuxbin_x64/libdfimageprocessbrightcontrast.so";
-    handle = dlopen(libName, RTLD_LAZY);
-    if(handle == NULL)
+    void *hLib;
+    char* libName = "dfconsoleasn.dll";
+    hLib = LoadLib(libName);
+    if(hLib == NULL)
     {
         cout << "load lib fail" << endl;
     }
+    FreeLib(&hLib);
     return 0;
 }
