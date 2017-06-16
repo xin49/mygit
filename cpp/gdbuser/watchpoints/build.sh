@@ -1,8 +1,15 @@
 #!/bin/bash
 
-Proj_Name=loadimage
+Proj_Name=$(basename $(pwd))
 
-Src="./loadimage.cpp"
+Cc=$1
+ExtPrm=$2
+
+Root="/home/ouo/code"
+Sdk=$Root/sdk
+Opencv=$Sdk/opencv
+
+Src="./breakpointer.cpp"
 Tool_Chains="g++"
 Lib1=" -lopencv_superres"
 Lib2=" -lopencv_stitching"
@@ -20,4 +27,4 @@ Lib13=" -lopencv_core"
 Lib14=" -lopencv_contrib"
 Opencv_Lib=$Lib1$Lib2$Lib3$Lib4$Lib5$Lib6$Lib7$Lib8$Lib9$Lib10$Lib11$Lib12$Lib13$Lib14
 
-$Tool_Chains $Src $Opencv_Lib -o $Proj_Name -g -w
+$Cc $ExtPrm $Src -I$Opencv/include -L$Opencv/lib $Opencv_Lib -o $Proj_Name -w
