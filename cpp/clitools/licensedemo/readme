@@ -1,0 +1,20 @@
+licensedemo is a app to get license and calculate it
+name: licensedemo
+object:
+    1 license
+    2 mac address
+    3 mac code
+    4 valid date
+function:
+    1 mac code =  GetMacCode(mac address)
+    2 mac address =  GetMacAddress(mac code)
+    3 license = GetLicense(mac address, valid date)
+              = GetLicense(mac code, valid date)
+    4 valid date = CheckLicense(mac address, license)
+                 = CheckLicense(mac code, license)
+
+cli
+    GetMacCode
+    GetMacAddress
+    GetLicense
+    CheckLicense
