@@ -1,0 +1,29 @@
+system structure
+    cpu
+        //multi-process
+        process
+            //shared memory and data
+            //multi-thread
+            thread
+            {
+                //shared memory and data
+                mutual exclusion| Mutex
+                semaphore
+            }
+
+    use multi-process and multi-thread can realize system multi-task
+event(complicated task).
+
+    linux posix realize multi-thread c++ programs. Multi-thread Api:
+posix threads/PThreads.
+    pthreads/posix threads: portable operation system interface threads api
+
+http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html
+-------------------------------
+c++ multi-thread
+
+#include <pthread.h>
+
+api:
+    pthread_create: create a pthread and initial it
+    pthread_exit: destory a pthread
