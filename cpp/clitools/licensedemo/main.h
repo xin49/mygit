@@ -28,4 +28,11 @@ const int FIsMacCode = 1;
 const char FIsMacAddrName[] = "IsMacAddr";
 const char FIsMacCodeName[] = "IsMacCode";
 
+//namespace licensedemo{
+//    static int GetCommand(string argCmdName)
+//    {
+//
+//    }
+//}
+
 #endif

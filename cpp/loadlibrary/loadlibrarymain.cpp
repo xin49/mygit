@@ -39,12 +39,15 @@ void FreeLib(void** pHLib)
 int main()
 {
     void *hLib;
-    char* libName = "dfconsoleasn.dll";
-    hLib = LoadLib(libName);
-    if(hLib == NULL)
+    char* libName = "libdfmeasurepatternmatch.so";
+    for(int idx=0; idx<10; idx++)
     {
-        cout << "load lib fail" << endl;
+        hLib = LoadLib(libName);
+        if(hLib == NULL)
+        {
+            cout << "load lib fail" << endl;
+        }
+        FreeLib(&hLib);       
     }
-    FreeLib(&hLib);
     return 0;
 }
