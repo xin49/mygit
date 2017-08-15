@@ -106,7 +106,7 @@ class TThreadServerRollcall(threading.Thread):
 def Respond():
     return 0
 
-def ClientReciveRollcall(argServer=socket.socket(socket.AF_INET, socket.SOCK_DGRAM), argPort=("", 52221), argMesLen=1024)
+def ClientReciveRollcall(argServer=socket.socket(socket.AF_INET, socket.SOCK_DGRAM), argPort=("", 52221), argMesLen=1024):
     print("ClientReciveRollcall in")
     time = 1
     argServer.bind(argPort)

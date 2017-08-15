@@ -51,6 +51,7 @@ obj: server, client
 # server
 import threading
 import time
+import sys
 
 def DecodeData(argData):
     print("DecodeData in")
@@ -103,26 +104,51 @@ class TThreadServerRollcall(threading.Thread):
         print ("TThreadServerRollcall.run() out")
 
 # client
-def Respond():
-    return 0
+import random
 
-def ClientReciveRollcall(argServer=socket.socket(socket.AF_INET, socket.SOCK_DGRAM), argPort=("", 52221), argMesLen=1024)
+def ClientGetStatus():
+    print("ClientReplyStatus in")
+    status = random.randint(0, 1)
+    if(status == 0):
+        return "signin"
+    else:
+        return "busy"
+    print("ClientReplyStatus out")
+
+def ClientReplyStatus(argServer=socket.socket(socket.AF_INET, socket.SOCK_DGRAM), argPort=("", 52222), argCont="", argCloseFlg=True):
+    print("ClientReplyStatus in")
+    argServer.sendto(argCont.encode(), argPort)
+    if(argCloseFlg):
+        argServer.close
+    print("ClientReplyStatus out")
+
+def ClientReciveRollcall(argServer=socket.socket(socket.AF_INET, socket.SOCK_DGRAM), argPort=("", 52221), argMesLen=1024):
     print("ClientReciveRollcall in")
     time = 1
     argServer.bind(argPort)
     while True:
         data, addr = argServer.recvfrom(argMesLen)
         print("time:", time)
-        if(data == "rollcall"):
-            print('Got message from', addr, "data", data)
-            Respond()
+        print('Got message from', addr, "data", data)
+        if(data.decode() == "rollcall"):
+            ClientReplyStatus(argCont=ClientGetStatus())
         time = time + 1
     argServer.close
     print("ClientReciveRollcall out")
 
-threadServerRollcall = TThreadServerRollcall(1, "threadServerRollcall")
-threadServerReciveClientStatus = TThreadServerReciveClientStatus(2, "threadServerReciveClientStatus")
-threadServerRollcall.start()
-threadServerReciveClientStatus.start()
-threadServerRollcall.join()
-threadServerReciveClientStatus.join()
+class TThreadClientReciveRollcall(threading.Thread):
+    def __init__(self, threadID, name):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+    def run(self):
+        print ("TThreadClientReciveRollcall.run() in")
+        ClientReciveRollcall()
+        print ("TThreadClientReciveRollcall.run() out")
+
+threadClientReciveRollcall = TThreadClientReciveRollcall(1, "threadClientReciveRollcall")
+try:
+    threadClientReciveRollcall.start()
+except KeyboardInterrupt:
+    input("")
+threadClientReciveRollcall.join()
